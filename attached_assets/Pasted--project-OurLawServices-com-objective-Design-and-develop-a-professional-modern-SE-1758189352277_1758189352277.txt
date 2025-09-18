@@ -1,0 +1,116 @@
+{
+  "project": "OurLawServices.com",
+  "objective": "Design and develop a professional, modern, SEO-optimized law firm website with advanced UI/UX.",
+  "style": {
+    "design": "Unique, not template-based",
+    "look": "Professional, clean, trustworthy",
+    "colors": ["#002855", "#ffffff", "#D4AF37"],
+    "typography": {
+      "headings": "Serif (Merriweather, Playfair Display)",
+      "body": "Sans Serif (Inter, Open Sans)"
+    },
+    "ui": "Advanced, smooth animations, responsive, interactive",
+    "images": "Professional law-related stock images"
+  },
+  "pages": [
+    {
+      "name": "Homepage",
+      "sections": [
+        "Hero section with headline, lawyer image, call-to-action button (Book Consultation)",
+        "Quick firm introduction",
+        "Highlighted services with animated icons",
+        "Client testimonials carousel",
+        "Call-to-action banner (Free Consultation)",
+        "Footer with contact info, social links, Google Maps"
+      ]
+    },
+    {
+      "name": "About Us",
+      "sections": [
+        "Firm mission and values",
+        "Lawyer team profiles with photos and bios",
+        "Why choose us (trust badges, client-first approach)"
+      ]
+    },
+    {
+      "name": "Practice Areas",
+      "subpages": [
+        {
+          "title": "Immigration Law",
+          "content": [
+            "Visa applications",
+            "Permanent residency",
+            "Refugee claims",
+            "Study and Work permits"
+          ]
+        },
+        {
+          "title": "Real Estate Law",
+          "content": [
+            "Property buying/selling",
+            "Title transfers",
+            "Closings"
+          ]
+        },
+        {
+          "title": "Wills & Power of Attorney",
+          "content": [
+            "Estate planning",
+            "Legal wills drafting",
+            "Guidance on powers of attorney"
+          ]
+        },
+        {
+          "title": "Criminal Law",
+          "content": [
+            "Defense services",
+            "Bail hearings",
+            "Appeals"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blog/Insights",
+      "features": [
+        "SEO-optimized blog posts",
+        "Categories and search",
+        "Internal linking"
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "features": [
+        "Contact form with validation",
+        "Google Map embed",
+        "Click-to-call phone",
+        "Office address and email"
+      ]
+    }
+  ],
+  "features": {
+    "ui": [
+      "GSAP or Framer Motion animations",
+      "Hover effects",
+      "Collapsible FAQ accordions",
+      "Testimonial slider"
+    ],
+    "functional": [
+      "Live chat integration (WhatsApp, Tawk.to, Crisp)",
+      "Appointment booking form",
+      "Schema markup for SEO",
+      "Secure and fast (Core Web Vitals optimized)"
+    ]
+  },
+  "technical": {
+    "framework": "Next.js / React.js",
+    "css": "Tailwind CSS",
+    "responsive": true,
+    "seo_ready": true,
+    "integration": [
+      "Google Analytics",
+      "Google Search Console"
+    ]
+  },
+  "deliverable": "A professional, modern, fully functional law firm website with advanced UI/UX, optimized for SEO, and ready for client acquisition."
+}
