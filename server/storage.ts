@@ -94,6 +94,8 @@ export class MemStorage implements IStorage {
     const contact: Contact = {
       ...insertContact,
       id,
+      phone: insertContact.phone ?? null,
+      practiceArea: insertContact.practiceArea ?? null,
       createdAt: new Date()
     };
     this.contacts.set(id, contact);
@@ -105,6 +107,7 @@ export class MemStorage implements IStorage {
     const appointment: Appointment = {
       ...insertAppointment,
       id,
+      description: insertAppointment.description ?? null,
       createdAt: new Date()
     };
     this.appointments.set(id, appointment);
