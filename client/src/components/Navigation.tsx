@@ -20,8 +20,6 @@ export default function Navigation() {
   }, []);
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
@@ -59,7 +57,7 @@ export default function Navigation() {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
           {isOpen && (
-            <ul className="bg-secondary/20 mx-2 mb-2 rounded-lg border border-border/20">
+            <ul className="bg-slate-800/95 mx-2 mb-2 rounded-lg border border-border/20">
               {workPermitsNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -95,7 +93,7 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-800/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
                data-testid="work-permits-dropdown-menu">
             <ul className="p-4 space-y-1">
               {workPermitsNav.subItems.map((item) => (
@@ -142,7 +140,7 @@ export default function Navigation() {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
           {isOpen && (
-            <ul className="bg-secondary/20 mx-2 mb-2 rounded-lg border border-border/20">
+            <ul className="bg-slate-800/95 mx-2 mb-2 rounded-lg border border-border/20">
               {studyNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -178,7 +176,7 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-800/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
                data-testid="study-dropdown-menu">
             <ul className="p-4 space-y-1">
               {studyNav.subItems.map((item) => (
@@ -225,7 +223,7 @@ export default function Navigation() {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
           {isOpen && (
-            <ul className="bg-secondary/20 mx-2 mb-2 rounded-lg border border-border/20">
+            <ul className="bg-slate-800/95 mx-2 mb-2 rounded-lg border border-border/20">
               {visitNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -261,7 +259,7 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-800/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
                data-testid="visit-dropdown-menu">
             <ul className="p-4 space-y-1">
               {visitNav.subItems.map((item) => (
@@ -308,7 +306,7 @@ export default function Navigation() {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
           {isOpen && (
-            <ul className="bg-secondary/20 mx-2 mb-2 rounded-lg border border-border/20">
+            <ul className="bg-slate-800/95 mx-2 mb-2 rounded-lg border border-border/20">
               {businessNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -344,7 +342,7 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-800/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
                data-testid="business-dropdown-menu">
             <ul className="p-4 space-y-1">
               {businessNav.subItems.map((item) => (
