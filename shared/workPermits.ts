@@ -2244,3 +2244,15 @@ export const studyNav = {
     }
   ]
 };
+
+// Visit Canada navigation data
+export const visitNav = {
+  title: "Visit Canada",
+  href: "/visit",
+  description: "Visitor visas and travel authorization for Canada",
+  subItems: visitPages.map(page => ({
+    title: page.title,
+    href: `/visit/${page.slug}`,
+    description: page.hero.description
+  }))
+};
