@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Briefcase, GraduationCap, Plane } from "lucide-react";
+import { Menu, X, ChevronDown, Briefcase, GraduationCap, Plane, Building } from "lucide-react";
 import MegaMenu, { MobilePracticeAreasMenu } from "./MegaMenu";
-import { workPermitsNav, studyNav, visitNav } from "@shared/workPermits";
+import { workPermitsNav, studyNav, visitNav, businessNav } from "@shared/workPermits";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -29,9 +29,11 @@ export default function Navigation() {
   const [workPermitsOpen, setWorkPermitsOpen] = useState(false);
   const [studyOpen, setStudyOpen] = useState(false);
   const [visitOpen, setVisitOpen] = useState(false);
+  const [businessOpen, setBusinessOpen] = useState(false);
   const [workPermitsMobileOpen, setWorkPermitsMobileOpen] = useState(false);
   const [studyMobileOpen, setStudyMobileOpen] = useState(false);
   const [visitMobileOpen, setVisitMobileOpen] = useState(false);
+  const [businessMobileOpen, setBusinessMobileOpen] = useState(false);
 
   const WorkPermitsDropdown = ({ isMobile = false }) => {
     const isOpen = isMobile ? workPermitsMobileOpen : workPermitsOpen;
@@ -282,6 +284,89 @@ export default function Navigation() {
     );
   };
 
+  const BusinessDropdown = ({ isMobile = false }) => {
+    const isOpen = isMobile ? businessMobileOpen : businessOpen;
+    const setIsOpen = isMobile ? setBusinessMobileOpen : setBusinessOpen;
+    
+    const handleLinkClick = () => {
+      setIsOpen(false);
+      if (isMobile) setIsMobileMenuOpen(false);
+    };
+
+    if (isMobile) {
+      return (
+        <div className="border-b border-border/30 last:border-b-0">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center justify-between w-full p-4 text-left hover:bg-secondary/50 transition-colors"
+            data-testid="mobile-business-trigger"
+          >
+            <div className="flex items-center space-x-3">
+              <Building className="w-5 h-5 text-primary" />
+              <span className="font-medium text-foreground">Business</span>
+            </div>
+            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {isOpen && (
+            <ul className="bg-secondary/20 mx-2 mb-2 rounded-lg border border-border/20">
+              {businessNav.subItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/20 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground"
+                    onClick={handleLinkClick}
+                    data-testid={`mobile-business-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-3"></span>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    }
+
+    return (
+      <div 
+        className="relative"
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+        data-testid="business-dropdown"
+      >
+        <Link
+          href={businessNav.href}
+          className="flex items-center space-x-1 px-3 py-2 text-foreground hover:text-primary transition-colors"
+          data-testid="business-link"
+        >
+          <span>Business</span>
+          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        </Link>
+        {isOpen && (
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+               data-testid="business-dropdown-menu">
+            <ul className="p-4 space-y-1">
+              {businessNav.subItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm"
+                    onClick={handleLinkClick}
+                    data-testid={`business-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-2"></span>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -313,6 +398,7 @@ export default function Navigation() {
             <WorkPermitsDropdown />
             <StudyDropdown />
             <VisitDropdown />
+            <BusinessDropdown />
             <MegaMenu />
             <Button 
               asChild 
@@ -354,6 +440,7 @@ export default function Navigation() {
               <WorkPermitsDropdown isMobile={true} />
               <StudyDropdown isMobile={true} />
               <VisitDropdown isMobile={true} />
+              <BusinessDropdown isMobile={true} />
               <MobilePracticeAreasMenu onClose={() => setIsMobileMenuOpen(false)} />
               <div className="p-4">
                 <Button 
