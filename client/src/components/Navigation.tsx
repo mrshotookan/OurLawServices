@@ -86,7 +86,7 @@ export default function Navigation() {
       >
         <Link
           href={workPermitsNav.href}
-          className="flex items-center space-x-1 px-3 py-2 text-foreground hover:text-primary transition-colors"
+          className="flex items-center space-x-1 px-2 lg:px-3 py-2 text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap"
           data-testid="work-permits-link"
         >
           <span>Work Permits</span>
@@ -100,7 +100,7 @@ export default function Navigation() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm"
+                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm leading-tight"
                     onClick={handleLinkClick}
                     data-testid={`work-permit-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
@@ -169,7 +169,7 @@ export default function Navigation() {
       >
         <Link
           href={studyNav.href}
-          className="flex items-center space-x-1 px-3 py-2 text-foreground hover:text-primary transition-colors"
+          className="flex items-center space-x-1 px-2 lg:px-3 py-2 text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap"
           data-testid="study-link"
         >
           <span>Study</span>
@@ -183,7 +183,7 @@ export default function Navigation() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm"
+                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm leading-tight"
                     onClick={handleLinkClick}
                     data-testid={`study-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
@@ -252,7 +252,7 @@ export default function Navigation() {
       >
         <Link
           href={visitNav.href}
-          className="flex items-center space-x-1 px-3 py-2 text-foreground hover:text-primary transition-colors"
+          className="flex items-center space-x-1 px-2 lg:px-3 py-2 text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap"
           data-testid="visit-link"
         >
           <span>Visit Canada</span>
@@ -266,7 +266,7 @@ export default function Navigation() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm"
+                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm leading-tight"
                     onClick={handleLinkClick}
                     data-testid={`visit-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
@@ -335,7 +335,7 @@ export default function Navigation() {
       >
         <Link
           href={businessNav.href}
-          className="flex items-center space-x-1 px-3 py-2 text-foreground hover:text-primary transition-colors"
+          className="flex items-center space-x-1 px-2 lg:px-3 py-2 text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap"
           data-testid="business-link"
         >
           <span>Business</span>
@@ -349,7 +349,7 @@ export default function Navigation() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm"
+                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm leading-tight"
                     onClick={handleLinkClick}
                     data-testid={`business-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
@@ -375,17 +375,17 @@ export default function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center" data-testid="logo-link">
-            <h1 className="text-2xl font-serif font-bold text-primary">
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-primary transition-all duration-300">
               OurLawServices
             </h1>
           </Link>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4 xl:space-x-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`transition-colors hover:text-accent ${
+                className={`transition-colors hover:text-accent text-sm lg:text-base whitespace-nowrap ${
                   location === item.href ? "text-accent" : "text-foreground"
                 }`}
                 data-testid={`nav-link-${item.name.toLowerCase().replace(" ", "-")}`}
@@ -400,7 +400,7 @@ export default function Navigation() {
             <MegaMenu />
             <Button 
               asChild 
-              className="bg-accent text-accent-foreground hover:bg-accent/90"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 text-sm lg:text-base px-3 lg:px-4 py-2 whitespace-nowrap"
               data-testid="book-consultation-button"
             >
               <Link href="/contact">Book Consultation</Link>
