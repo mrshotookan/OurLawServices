@@ -57,16 +57,16 @@ export default function Navigation() {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
           {isOpen && (
-            <ul className="bg-slate-800/95 mx-2 mb-2 rounded-lg border border-border/20">
+            <ul className="bg-slate-900/95 mx-2 mb-2 rounded-lg border border-border/20">
               {workPermitsNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/20 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground"
+                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/10 hover:bg-background/20 text-white hover:text-white border border-border/20 hover:border-accent/40 rounded-md transition-all duration-200"
                     onClick={handleLinkClick}
                     data-testid={`mobile-work-permit-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-3"></span>
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full mr-3"></span>
                     {item.title}
                   </Link>
                 </li>
@@ -93,18 +93,18 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-800/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-900/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
                data-testid="work-permits-dropdown-menu">
             <ul className="p-4 space-y-1">
               {workPermitsNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm leading-tight"
+                    className="flex items-center px-3 py-2 text-sm bg-background/10 hover:bg-background/20 text-white hover:text-white border border-border/30 hover:border-accent/40 rounded-md transition-all duration-200 hover:shadow-sm leading-tight"
                     onClick={handleLinkClick}
                     data-testid={`work-permit-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-2"></span>
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full mr-2"></span>
                     {item.title}
                   </Link>
                 </li>
@@ -140,16 +140,16 @@ export default function Navigation() {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
           {isOpen && (
-            <ul className="bg-slate-800/95 mx-2 mb-2 rounded-lg border border-border/20">
+            <ul className="bg-slate-900/95 mx-2 mb-2 rounded-lg border border-border/20">
               {studyNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/20 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground"
+                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/10 hover:bg-background/20 text-white hover:text-white border border-border/20 hover:border-accent/40 rounded-md transition-all duration-200"
                     onClick={handleLinkClick}
                     data-testid={`mobile-study-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-3"></span>
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full mr-3"></span>
                     {item.title}
                   </Link>
                 </li>
@@ -176,18 +176,18 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-800/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-900/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
                data-testid="study-dropdown-menu">
             <ul className="p-4 space-y-1">
               {studyNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm leading-tight"
+                    className="flex items-center px-3 py-2 text-sm bg-background/10 hover:bg-background/20 text-white hover:text-white border border-border/30 hover:border-accent/40 rounded-md transition-all duration-200 hover:shadow-sm leading-tight"
                     onClick={handleLinkClick}
                     data-testid={`study-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-2"></span>
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full mr-2"></span>
                     {item.title}
                   </Link>
                 </li>
@@ -223,16 +223,16 @@ export default function Navigation() {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
           {isOpen && (
-            <ul className="bg-slate-800/95 mx-2 mb-2 rounded-lg border border-border/20">
+            <ul className="bg-slate-900/95 mx-2 mb-2 rounded-lg border border-border/20">
               {visitNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/20 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground"
+                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/10 hover:bg-background/20 text-white hover:text-white border border-border/20 hover:border-accent/40 rounded-md transition-all duration-200"
                     onClick={handleLinkClick}
                     data-testid={`mobile-visit-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-3"></span>
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full mr-3"></span>
                     {item.title}
                   </Link>
                 </li>
@@ -259,18 +259,18 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-800/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-900/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
                data-testid="visit-dropdown-menu">
             <ul className="p-4 space-y-1">
               {visitNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm leading-tight"
+                    className="flex items-center px-3 py-2 text-sm bg-background/10 hover:bg-background/20 text-white hover:text-white border border-border/30 hover:border-accent/40 rounded-md transition-all duration-200 hover:shadow-sm leading-tight"
                     onClick={handleLinkClick}
                     data-testid={`visit-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-2"></span>
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full mr-2"></span>
                     {item.title}
                   </Link>
                 </li>
@@ -306,16 +306,16 @@ export default function Navigation() {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
           {isOpen && (
-            <ul className="bg-slate-800/95 mx-2 mb-2 rounded-lg border border-border/20">
+            <ul className="bg-slate-900/95 mx-2 mb-2 rounded-lg border border-border/20">
               {businessNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/20 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground"
+                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/10 hover:bg-background/20 text-white hover:text-white border border-border/20 hover:border-accent/40 rounded-md transition-all duration-200"
                     onClick={handleLinkClick}
                     data-testid={`mobile-business-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-3"></span>
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full mr-3"></span>
                     {item.title}
                   </Link>
                 </li>
@@ -342,18 +342,18 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-800/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
+          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-slate-900/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
                data-testid="business-dropdown-menu">
             <ul className="p-4 space-y-1">
               {businessNav.subItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm leading-tight"
+                    className="flex items-center px-3 py-2 text-sm bg-background/10 hover:bg-background/20 text-white hover:text-white border border-border/30 hover:border-accent/40 rounded-md transition-all duration-200 hover:shadow-sm leading-tight"
                     onClick={handleLinkClick}
                     data-testid={`business-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-2"></span>
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full mr-2"></span>
                     {item.title}
                   </Link>
                 </li>

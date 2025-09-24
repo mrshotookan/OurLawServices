@@ -82,7 +82,8 @@
   
   .nav-sticky {
     backdrop-filter: blur(10px);
-    background: hsla(0, 0%, 100%, 0.95);
+    background: hsla(0, 0%, 100%, 0.98);
+    border-bottom: 1px solid hsla(213, 20%, 90%, 0.3);
   }
   
   .service-card {
