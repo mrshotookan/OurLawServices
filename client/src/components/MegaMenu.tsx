@@ -53,63 +53,65 @@ export default function MegaMenu({ onClose }: MegaMenuProps) {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-screen max-w-4xl z-50 bg-white dark:bg-black border border-border dark:border-border rounded-lg shadow-xl"
+        <div className="absolute top-full left-0 mt-2 w-screen max-w-5xl z-50 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-xl"
              data-testid="mega-menu-dropdown">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
             {practiceAreas.map((area) => (
               <div key={area.title} className="space-y-3">
                 <Link
                   href={area.href}
-                  className="flex items-center space-x-3 group hover:bg-secondary/50 dark:hover:bg-secondary/50 p-3 rounded-lg transition-colors"
+                  className="flex items-center space-x-3 group bg-secondary/40 hover:bg-secondary hover:shadow-sm p-4 rounded-lg transition-all duration-200 border border-border/20 hover:border-border/40"
                   onClick={handleLinkClick}
                   data-testid={`mega-menu-${area.title.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <div className="text-primary dark:text-primary">
                     {getIcon(area.title)}
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-primary dark:text-primary group-hover:text-accent dark:group-hover:text-accent">
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
                       {area.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground dark:text-muted-foreground">
+                    <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors">
                       {area.description}
                     </p>
                   </div>
                 </Link>
 
                 {area.subItems && (
-                  <div className="ml-8 space-y-2">
+                  <ul className="ml-6 space-y-1 mt-3">
                     {area.subItems.map((subItem) => (
-                      <Link
-                        key={subItem.href}
-                        href={subItem.href}
-                        className="block px-3 py-2 text-sm text-muted-foreground dark:text-muted-foreground hover:text-primary dark:hover:text-primary hover:bg-secondary/30 dark:hover:bg-secondary/30 rounded transition-colors"
-                        onClick={handleLinkClick}
-                        data-testid={`mega-menu-${subItem.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      >
-                        {subItem.title}
-                      </Link>
+                      <li key={subItem.href}>
+                        <Link
+                          href={subItem.href}
+                          className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm"
+                          onClick={handleLinkClick}
+                          data-testid={`mega-menu-${subItem.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        >
+                          <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-2 group-hover:bg-primary transition-colors"></span>
+                          {subItem.title}
+                        </Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 )}
               </div>
             ))}
           </div>
 
           {/* Call to Action Section */}
-          <div className="border-t border-border dark:border-border bg-secondary/30 dark:bg-secondary/30 p-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div>
-                <h4 className="font-semibold text-primary dark:text-primary mb-1">
+          <div className="border-t border-border bg-secondary/50 p-6 rounded-b-lg">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex-1">
+                <h4 className="font-semibold text-foreground mb-1">
                   Need Legal Consultation?
                 </h4>
-                <p className="text-sm text-muted-foreground dark:text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Get expert legal advice tailored to your specific situation.
                 </p>
               </div>
               <Link
                 href="/contact"
-                className="bg-primary dark:bg-primary hover:bg-accent dark:hover:bg-accent text-white dark:text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2.5 rounded-md font-medium transition-all duration-200 hover:shadow-sm whitespace-nowrap"
                 onClick={handleLinkClick}
                 data-testid="mega-menu-cta-contact"
               >
@@ -162,51 +164,53 @@ export function MobilePracticeAreasMenu({ onClose }: MegaMenuProps) {
       </button>
 
       {isOpen && (
-        <div className="bg-secondary/30 dark:bg-secondary/30" data-testid="mobile-mega-menu-content">
+        <div className="bg-secondary/20" data-testid="mobile-mega-menu-content">
           {practiceAreas.map((area) => (
-            <div key={area.title} className="border-b border-border/50 dark:border-border/50 last:border-b-0">
+            <div key={area.title} className="border-b border-border/30 last:border-b-0">
               <Link
                 href={area.href}
-                className="flex items-center space-x-3 p-4 hover:bg-secondary/50 dark:hover:bg-secondary/50"
+                className="flex items-center space-x-3 p-4 bg-background/40 hover:bg-secondary/60 transition-colors duration-200 m-2 rounded-lg border border-border/20 hover:border-border/40"
                 onClick={handleLinkClick}
                 data-testid={`mobile-mega-menu-${area.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <div className="text-primary dark:text-primary">
                   {getIcon(area.title)}
                 </div>
-                <div>
-                  <div className="font-medium text-primary dark:text-primary">
+                <div className="flex-1">
+                  <div className="font-medium text-foreground">
                     {area.title}
                   </div>
-                  <div className="text-sm text-muted-foreground dark:text-muted-foreground">
+                  <div className="text-sm text-muted-foreground">
                     {area.description}
                   </div>
                 </div>
               </Link>
 
               {area.subItems && (
-                <div className="bg-background/50 dark:bg-background/50">
+                <ul className="bg-background/30 mx-2 mb-2 rounded-lg border border-border/20">
                   {area.subItems.map((subItem) => (
-                    <Link
-                      key={subItem.href}
-                      href={subItem.href}
-                      className="block px-12 py-3 text-sm text-muted-foreground dark:text-muted-foreground hover:text-primary dark:hover:text-primary hover:bg-secondary/30 dark:hover:bg-secondary/30"
-                      onClick={handleLinkClick}
-                      data-testid={`mobile-mega-menu-${subItem.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    >
-                      {subItem.title}
-                    </Link>
+                    <li key={subItem.href}>
+                      <Link
+                        href={subItem.href}
+                        className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/20 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground"
+                        onClick={handleLinkClick}
+                        data-testid={`mobile-mega-menu-${subItem.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-3"></span>
+                        {subItem.title}
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               )}
             </div>
           ))}
 
           {/* Mobile CTA */}
-          <div className="p-4">
+          <div className="p-4 bg-secondary/30 m-2 rounded-lg border border-border/20">
             <Link
               href="/contact"
-              className="block w-full bg-primary dark:bg-primary hover:bg-accent dark:hover:bg-accent text-white dark:text-white text-center px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground text-center px-6 py-3 rounded-md font-medium transition-all duration-200 hover:shadow-sm"
               onClick={handleLinkClick}
               data-testid="mobile-mega-menu-cta-contact"
             >
