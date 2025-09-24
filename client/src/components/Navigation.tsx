@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import MegaMenu, { MobilePracticeAreasMenu } from "./MegaMenu";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -20,7 +21,6 @@ export default function Navigation() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Practice Areas", href: "/practice-areas" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
@@ -53,6 +53,7 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
+            <MegaMenu />
             <Button 
               asChild 
               className="bg-accent text-accent-foreground hover:bg-accent/90"
@@ -75,13 +76,13 @@ export default function Navigation() {
         
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-4 pt-4">
+          <div className="md:hidden mt-4 pb-4 border-t border-border dark:border-border">
+            <div className="flex flex-col space-y-0 pt-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`transition-colors hover:text-accent ${
+                  className={`transition-colors hover:text-accent p-4 block ${
                     location === item.href ? "text-accent" : "text-foreground"
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -90,15 +91,18 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <Button 
-                asChild 
-                className="bg-accent text-accent-foreground hover:bg-accent/90 w-fit"
-                data-testid="mobile-book-consultation-button"
-              >
-                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  Book Consultation
-                </Link>
-              </Button>
+              <MobilePracticeAreasMenu onClose={() => setIsMobileMenuOpen(false)} />
+              <div className="p-4">
+                <Button 
+                  asChild 
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
+                  data-testid="mobile-book-consultation-button"
+                >
+                  <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                    Book Consultation
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}

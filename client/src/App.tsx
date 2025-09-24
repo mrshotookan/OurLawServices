@@ -16,6 +16,7 @@ import WillsPowerOfAttorney from "@/pages/WillsPowerOfAttorney";
 import CriminalLaw from "@/pages/CriminalLaw";
 import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
+import WorkPermitPage from "@/pages/WorkPermitPage";
 import Layout from "@/components/Layout";
 
 function Router() {
@@ -34,6 +35,7 @@ function Router() {
         <Route path="/criminal-law" component={CriminalLaw} />
         <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
+        <Route path="/work-permits/:slug" component={WorkPermitPage} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
