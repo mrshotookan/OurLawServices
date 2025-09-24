@@ -68,6 +68,41 @@ export interface StudyPage {
   }>;
 }
 
+export interface VisitPage {
+  id: string;
+  title: string;
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  hero: {
+    title: string;
+    description: string;
+  };
+  overview: {
+    title: string;
+    content: string[];
+  };
+  eligibility: {
+    title: string;
+    requirements: string[];
+  };
+  process: {
+    title: string;
+    steps: Array<{
+      step: number;
+      title: string;
+      description: string;
+    }>;
+  };
+  processingTime: string;
+  fees: string;
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
 export const workPermitPages: WorkPermitPage[] = [
   {
     id: "lmia-work-permits",
@@ -1407,6 +1442,740 @@ export const studyPages: StudyPage[] = [
       {
         question: "Can I challenge a PGWP refusal in court?",
         answer: "Judicial review is possible within 15 days of refusal, but success rates are low unless there are clear procedural errors or unreasonable decision-making."
+      }
+    ]
+  }
+];
+
+export const visitPages: VisitPage[] = [
+  {
+    id: "visitor-visa-refusal",
+    title: "Visitor Visa Refusal: eTA and TRV",
+    slug: "visitor-visa-refusal",
+    metaTitle: "Visitor Visa Refusal Canada - eTA and TRV Refusal Solutions | Immigration Lawyers",
+    metaDescription: "Expert help with visitor visa refusal appeals in Canada. Our immigration lawyers provide comprehensive support for eTA and TRV refusal cases with proven success strategies.",
+    keywords: ["visitor visa refusal", "TRV refusal", "eTA refusal", "Canada visitor visa", "visa refusal appeal", "temporary resident visa"],
+    hero: {
+      title: "Visitor Visa Refusal: eTA and TRV Solutions",
+      description: "Overcome visitor visa refusal with expert legal guidance. We help navigate eTA and TRV refusal challenges to secure your entry to Canada."
+    },
+    overview: {
+      title: "Understanding Visitor Visa Refusal",
+      content: [
+        "Visitor visa refusal affects thousands of applicants annually seeking to visit Canada for tourism, business, or family visits. Both electronic Travel Authorization (eTA) and Temporary Resident Visa (TRV) applications can face rejection for various reasons.",
+        "Common refusal grounds include insufficient financial support, lack of ties to home country, unclear travel purpose, or concerns about returning after the visit. Understanding specific refusal reasons is crucial for successful reapplication or appeal strategies.",
+        "Professional legal assistance significantly improves success rates for overturning refusal decisions or preparing stronger subsequent applications with proper documentation and evidence."
+      ]
+    },
+    eligibility: {
+      title: "Common Refusal Reasons",
+      requirements: [
+        "Insufficient funds to support visit and return journey",
+        "Lack of strong ties to home country (employment, property, family)",
+        "Unclear or inconsistent travel purpose and itinerary",
+        "Previous immigration violations or overstaying in Canada",
+        "Criminal record or security concerns",
+        "Medical inadmissibility issues",
+        "Incomplete or fraudulent documentation",
+        "Officer concerns about intention to return home"
+      ]
+    },
+    process: {
+      title: "Overcoming Refusal Process",
+      steps: [
+        {
+          step: 1,
+          title: "Analyze Refusal Letter",
+          description: "Carefully review the refusal letter to understand specific grounds and officer concerns."
+        },
+        {
+          step: 2,
+          title: "Gather Additional Evidence",
+          description: "Collect stronger documentation addressing each refusal reason with compelling evidence."
+        },
+        {
+          step: 3,
+          title: "Address Officer Concerns",
+          description: "Prepare detailed explanations and supporting documents for each concern raised."
+        },
+        {
+          step: 4,
+          title: "Submit New Application",
+          description: "File a comprehensive new application with enhanced documentation and explanations."
+        },
+        {
+          step: 5,
+          title: "Follow Up and Monitor",
+          description: "Track application progress and respond promptly to any additional requests."
+        }
+      ]
+    },
+    processingTime: "New application: 2-8 weeks depending on country",
+    fees: "eTA: $7 CAD; TRV: $100 CAD per person",
+    faqs: [
+      {
+        question: "Can I reapply immediately after refusal?",
+        answer: "Yes, you can reapply immediately, but it's crucial to address the refusal reasons with stronger evidence and documentation to avoid repeated rejections."
+      },
+      {
+        question: "How long should I wait before reapplying?",
+        answer: "There's no mandatory waiting period, but taking time to gather proper documentation and address refusal reasons significantly improves success chances."
+      },
+      {
+        question: "Will previous refusal affect future applications?",
+        answer: "Previous refusals must be disclosed in future applications, but addressing the refusal reasons properly can lead to approval despite prior rejections."
+      }
+    ]
+  },
+  {
+    id: "appeal-refused-trv",
+    title: "Can I Appeal my Refused TRV?",
+    slug: "appeal-refused-trv",
+    metaTitle: "Appeal Refused TRV Canada - Temporary Resident Visa Appeal Process | Immigration Lawyers",
+    metaDescription: "Learn about TRV appeal options in Canada. Our immigration lawyers explain judicial review processes and alternative strategies for refused temporary resident visa applications.",
+    keywords: ["TRV appeal", "temporary resident visa appeal", "judicial review", "visa refusal appeal", "Federal Court appeal", "immigration appeal"],
+    hero: {
+      title: "Can I Appeal my Refused TRV?",
+      description: "Understand your options after TRV refusal. Explore judicial review processes and alternative strategies to challenge refused temporary resident visa decisions."
+    },
+    overview: {
+      title: "TRV Appeal Options in Canada",
+      content: [
+        "Unlike some immigration applications, there is no formal appeal process for refused Temporary Resident Visa (TRV) applications. However, several legal avenues exist to challenge negative decisions through judicial review at the Federal Court.",
+        "Judicial review is available for cases involving procedural fairness violations, unreasonable decision-making, or legal errors by visa officers. This process examines whether the officer followed proper procedures and made reasonable conclusions based on evidence.",
+        "Alternative strategies include submitting new applications with enhanced documentation, requesting reconsideration with additional evidence, or addressing specific officer concerns identified in refusal letters."
+      ]
+    },
+    eligibility: {
+      title: "Judicial Review Grounds",
+      requirements: [
+        "Procedural fairness violations during application review",
+        "Unreasonable decision-making by the visa officer",
+        "Legal errors in interpreting immigration law or policy",
+        "Bias or appearance of bias in decision-making process",
+        "Failure to consider relevant evidence or factors",
+        "Reliance on irrelevant or incorrect information",
+        "Inadequate reasons provided for refusal decision",
+        "Violation of Charter rights or human rights"
+      ]
+    },
+    process: {
+      title: "Judicial Review Process",
+      steps: [
+        {
+          step: 1,
+          title: "Legal Assessment",
+          description: "Obtain legal review of refusal decision to identify potential grounds for judicial review."
+        },
+        {
+          step: 2,
+          title: "File Leave Application",
+          description: "Submit application for leave (permission) to Federal Court within 15 days of refusal."
+        },
+        {
+          step: 3,
+          title: "Prepare Court Materials",
+          description: "Compile court record, legal arguments, and supporting affidavits for the case."
+        },
+        {
+          step: 4,
+          title: "Leave Decision",
+          description: "Await Federal Court decision on whether to grant leave to proceed with judicial review."
+        },
+        {
+          step: 5,
+          title: "Judicial Review Hearing",
+          description: "If leave is granted, proceed with judicial review hearing before Federal Court judge."
+        },
+        {
+          step: 6,
+          title: "Court Decision",
+          description: "Receive court decision which may quash refusal and order new decision by different officer."
+        }
+      ]
+    },
+    processingTime: "Leave application: 3-6 months; Full judicial review: 12-18 months",
+    fees: "Federal Court fees: $50-$400 CAD; Legal representation varies",
+    faqs: [
+      {
+        question: "What is the time limit for judicial review?",
+        answer: "You must file for leave within 15 days of receiving the refusal decision. This deadline is strictly enforced with very limited exceptions."
+      },
+      {
+        question: "What happens if judicial review is successful?",
+        answer: "The court may quash the refusal decision and order a new decision by a different visa officer, but it doesn't guarantee visa approval."
+      },
+      {
+        question: "Is legal representation necessary?",
+        answer: "While not mandatory, legal representation is highly recommended given the complexity of Federal Court procedures and technical legal requirements."
+      }
+    ]
+  },
+  {
+    id: "visa-refusal-rates",
+    title: "Visa Refusal Rates",
+    slug: "visa-refusal-rates",
+    metaTitle: "Canada Visa Refusal Rates by Country - Immigration Statistics | Expert Analysis",
+    metaDescription: "Comprehensive analysis of Canada visa refusal rates by country and visa type. Get expert insights on improving application success rates with detailed statistics.",
+    keywords: ["visa refusal rates", "Canada visa statistics", "TRV refusal rates", "visitor visa approval rates", "immigration statistics", "visa success rates"],
+    hero: {
+      title: "Canada Visa Refusal Rates Analysis",
+      description: "Understand visa refusal statistics across countries and visa types. Get insights to improve your application success rate with comprehensive data analysis."
+    },
+    overview: {
+      title: "Understanding Visa Refusal Statistics",
+      content: [
+        "Canada's visa refusal rates vary significantly by country, visa type, and applicant circumstances. Global refusal rates for temporary resident visas average 20-40%, but can range from under 5% for low-risk countries to over 80% for high-risk regions.",
+        "Refusal rates are influenced by factors including economic conditions in applicant's home country, historical compliance rates, bilateral relations with Canada, and individual applicant profiles. Understanding these patterns helps in application preparation.",
+        "Statistics show significant variations between visa categories, with visitor visas typically having different approval rates than study permits or work permits. Professional guidance can help navigate these statistical realities."
+      ]
+    },
+    eligibility: {
+      title: "Factors Affecting Refusal Rates",
+      requirements: [
+        "Applicant's country of residence and citizenship",
+        "Purpose of visit (tourism, business, family visit)",
+        "Previous travel history to Canada and other countries",
+        "Economic conditions in home country",
+        "Individual financial circumstances and documentation",
+        "Strength of ties to home country",
+        "Application completeness and quality",
+        "Seasonal and processing center variations"
+      ]
+    },
+    process: {
+      title: "Improving Application Success",
+      steps: [
+        {
+          step: 1,
+          title: "Research Country-Specific Rates",
+          description: "Review refusal rates for your country and understand common refusal reasons."
+        },
+        {
+          step: 2,
+          title: "Strengthen Application Profile",
+          description: "Address high-risk factors with strong documentation and compelling evidence."
+        },
+        {
+          step: 3,
+          title: "Professional Assessment",
+          description: "Obtain expert evaluation of application strength before submission."
+        },
+        {
+          step: 4,
+          title: "Enhanced Documentation",
+          description: "Provide comprehensive supporting documents addressing all potential concerns."
+        },
+        {
+          step: 5,
+          title: "Strategic Timing",
+          description: "Consider optimal timing based on processing trends and personal circumstances."
+        }
+      ]
+    },
+    processingTime: "Statistical analysis: Updated annually; Application improvements: Immediate",
+    fees: "No fees for accessing statistics; Professional consultation varies",
+    faqs: [
+      {
+        question: "Which countries have the highest refusal rates?",
+        answer: "Countries with challenging economic conditions or limited travel history typically show higher refusal rates, often exceeding 60-80% for temporary resident visas."
+      },
+      {
+        question: "Do refusal rates change over time?",
+        answer: "Yes, refusal rates fluctuate based on economic conditions, policy changes, and global events. Annual statistics show these variations clearly."
+      },
+      {
+        question: "How can I check my country's specific rates?",
+        answer: "Immigration, Refugees and Citizenship Canada publishes annual statistics showing approval and refusal rates by country and visa category."
+      }
+    ]
+  },
+  {
+    id: "super-visa",
+    title: "Super Visa for Parents and Grandparents",
+    slug: "super-visa",
+    metaTitle: "Super Visa Canada - Parents and Grandparents Visa | Complete Application Guide",
+    metaDescription: "Complete guide to Canada Super Visa for parents and grandparents. Expert assistance with applications, requirements, and medical insurance for 10-year multi-entry visas.",
+    keywords: ["Super Visa Canada", "parents grandparents visa", "multi-entry visa", "family visit Canada", "Super Visa requirements", "parent visa Canada"],
+    hero: {
+      title: "Super Visa for Parents and Grandparents",
+      description: "Bring your parents and grandparents to Canada with Super Visa. Get expert help with applications, medical insurance, and documentation for 10-year multi-entry access."
+    },
+    overview: {
+      title: "What is the Super Visa?",
+      content: [
+        "The Super Visa is a multi-entry visa allowing parents and grandparents of Canadian citizens and permanent residents to visit Canada for up to 2 years per visit over a 10-year period without needing to renew their status.",
+        "Unlike regular visitor visas, Super Visa has specific requirements including mandatory medical insurance, higher income thresholds for sponsors, and medical examinations. It provides greater flexibility for extended family visits.",
+        "This program recognizes the importance of family reunification while maintaining temporary status, offering a pathway for parents and grandparents to spend significant time with their Canadian families."
+      ]
+    },
+    eligibility: {
+      title: "Super Visa Requirements",
+      requirements: [
+        "Parent or grandparent of Canadian citizen or permanent resident",
+        "Valid medical insurance from approved Canadian insurer ($100,000 minimum)",
+        "Medical examination completed by designated panel physician",
+        "Letter of invitation from child or grandchild in Canada",
+        "Proof of sponsor's income meeting minimum threshold",
+        "Proof of strong ties to home country",
+        "No criminal record and pass security clearance",
+        "Demonstrate intent to return to home country"
+      ]
+    },
+    process: {
+      title: "Super Visa Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Verify Eligibility",
+          description: "Confirm relationship to Canadian citizen/PR and review income requirements for sponsor."
+        },
+        {
+          step: 2,
+          title: "Obtain Medical Insurance",
+          description: "Purchase eligible medical insurance coverage from Canadian insurer for minimum $100,000."
+        },
+        {
+          step: 3,
+          title: "Complete Medical Examination",
+          description: "Undergo medical examination with designated panel physician in your country."
+        },
+        {
+          step: 4,
+          title: "Gather Documentation",
+          description: "Compile invitation letter, financial documents, relationship proof, and all supporting materials."
+        },
+        {
+          step: 5,
+          title: "Submit Application",
+          description: "Apply online or at visa application center with complete documentation package."
+        },
+        {
+          step: 6,
+          title: "Interview and Decision",
+          description: "Attend interview if requested and await decision on Super Visa application."
+        }
+      ]
+    },
+    processingTime: "8-20 weeks depending on country and completeness",
+    fees: "$100 CAD per person plus biometrics fees",
+    faqs: [
+      {
+        question: "How long can I stay in Canada with Super Visa?",
+        answer: "Super Visa allows stays up to 2 years per entry. You can leave and re-enter Canada multiple times within the 10-year validity period."
+      },
+      {
+        question: "What income level must my sponsor meet?",
+        answer: "Sponsors must meet Low Income Cut-Off (LICO) plus 30% for their family size including sponsored parents/grandparents. Amounts vary by family size and location."
+      },
+      {
+        question: "Can I work in Canada with Super Visa?",
+        answer: "No, Super Visa is for visiting purposes only. You cannot work or study in Canada with this visa type."
+      }
+    ]
+  },
+  {
+    id: "super-visa-refusal",
+    title: "Super Visa Refusal",
+    slug: "super-visa-refusal",
+    metaTitle: "Super Visa Refusal Canada - Appeal and Reapplication Strategies | Immigration Lawyers",
+    metaDescription: "Expert help with Super Visa refusal cases. Our immigration lawyers provide comprehensive strategies for appeals, reapplications, and addressing refusal reasons.",
+    keywords: ["Super Visa refusal", "parent visa refusal", "grandparent visa refusal", "Super Visa appeal", "family visa refusal", "visa refusal solutions"],
+    hero: {
+      title: "Super Visa Refusal Solutions",
+      description: "Overcome Super Visa refusal with expert legal strategies. Get comprehensive assistance for appeals, reapplications, and addressing officer concerns."
+    },
+    overview: {
+      title: "Understanding Super Visa Refusal",
+      content: [
+        "Super Visa refusal can occur for various reasons including inadequate medical insurance, insufficient sponsor income, concerns about returning home, or medical inadmissibility. Understanding specific refusal grounds is essential for successful reapplication.",
+        "Common refusal reasons include failure to meet LICO+30% income requirements, inadequate insurance coverage, incomplete medical examinations, or officer concerns about applicant's ties to home country and intention to return.",
+        "Professional legal assistance significantly improves chances of overcoming refusal through proper documentation, addressing officer concerns, and presenting compelling evidence for reapplication or judicial review processes."
+      ]
+    },
+    eligibility: {
+      title: "Common Super Visa Refusal Reasons",
+      requirements: [
+        "Sponsor income below LICO+30% threshold",
+        "Inadequate or non-qualifying medical insurance coverage",
+        "Incomplete or failed medical examination",
+        "Insufficient ties to home country",
+        "Concerns about intention to leave Canada",
+        "Previous immigration violations or overstaying",
+        "Criminal record or security concerns",
+        "Relationship to sponsor not adequately proven"
+      ]
+    },
+    process: {
+      title: "Addressing Super Visa Refusal",
+      steps: [
+        {
+          step: 1,
+          title: "Analyze Refusal Reasons",
+          description: "Carefully review refusal letter and identify specific grounds and officer concerns."
+        },
+        {
+          step: 2,
+          title: "Address Income Requirements",
+          description: "Ensure sponsor meets LICO+30% with proper documentation and evidence."
+        },
+        {
+          step: 3,
+          title: "Strengthen Insurance Coverage",
+          description: "Obtain qualifying insurance policy meeting all Super Visa requirements."
+        },
+        {
+          step: 4,
+          title: "Enhance Supporting Evidence",
+          description: "Gather additional documentation addressing ties to home country and visit purpose."
+        },
+        {
+          step: 5,
+          title: "Legal Assessment",
+          description: "Obtain professional evaluation for reapplication strategy or judicial review options."
+        },
+        {
+          step: 6,
+          title: "Submit New Application",
+          description: "File comprehensive new application addressing all refusal reasons with enhanced documentation."
+        }
+      ]
+    },
+    processingTime: "New application: 8-20 weeks; Judicial review: 12-18 months",
+    fees: "New application: $100 CAD; Legal consultation and judicial review fees vary",
+    faqs: [
+      {
+        question: "Can I appeal Super Visa refusal?",
+        answer: "There's no formal appeal process, but judicial review may be available for cases involving procedural errors or unreasonable decisions. New applications are also possible."
+      },
+      {
+        question: "How soon can I reapply after refusal?",
+        answer: "You can reapply immediately, but it's important to address all refusal reasons with stronger documentation to avoid repeated rejection."
+      },
+      {
+        question: "What if my sponsor's income is borderline?",
+        answer: "Include additional income sources, co-signers if permitted, or wait until income increases. Proper documentation of stable, ongoing income is crucial."
+      }
+    ]
+  },
+  {
+    id: "visit-on-business",
+    title: "Visit on Business",
+    slug: "visit-on-business",
+    metaTitle: "Canada Business Visitor Visa - Temporary Business Entry Requirements | Expert Guide",
+    metaDescription: "Complete guide to visiting Canada on business. Expert assistance with business visitor requirements, documentation, and application process for temporary business entry.",
+    keywords: ["Canada business visitor", "business visa Canada", "temporary business entry", "business visit requirements", "B-1 equivalent Canada", "business visitor permit"],
+    hero: {
+      title: "Visit Canada on Business",
+      description: "Navigate Canada's business visitor requirements with expert guidance. Get comprehensive assistance for temporary business entry and commercial activities."
+    },
+    overview: {
+      title: "Business Visitor Program",
+      content: [
+        "Canada's Business Visitor Program allows foreign nationals to enter temporarily for specific business activities without requiring a work permit. This includes meetings, conferences, training, and commercial activities that don't involve entering the Canadian labor market.",
+        "Business visitors must demonstrate their primary employment and income source remains outside Canada, with activities limited to specific permitted business functions. The visit must be temporary with clear intention to return home.",
+        "Eligible activities include attending meetings, conferences, or training sessions; conducting market research; negotiating contracts; providing after-sales service; and participating in trade shows or professional conferences."
+      ]
+    },
+    eligibility: {
+      title: "Business Visitor Requirements",
+      requirements: [
+        "Primary employment and income source outside Canada",
+        "Business activities that don't compete with Canadian workers",
+        "Clear temporary purpose for business visit",
+        "Sufficient funds for stay and return journey",
+        "Valid passport and travel documents",
+        "No criminal record or security concerns",
+        "Strong ties to home country ensuring return",
+        "Invitation letter from Canadian business partner (if applicable)"
+      ]
+    },
+    process: {
+      title: "Business Visitor Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Determine Visitor Status Need",
+          description: "Assess whether activities require business visitor status or work permit based on nature of work."
+        },
+        {
+          step: 2,
+          title: "Gather Business Documentation",
+          description: "Collect letters of invitation, business registration, employment verification, and activity details."
+        },
+        {
+          step: 3,
+          title: "Apply for TRV/eTA",
+          description: "Submit visitor visa or eTA application indicating business purpose and providing supporting documents."
+        },
+        {
+          step: 4,
+          title: "Prepare for Interview",
+          description: "Be ready to explain business activities, duration, and ties to home country if interview required."
+        },
+        {
+          step: 5,
+          title: "Enter Canada",
+          description: "Present documents at port of entry and explain business visit purpose to border services officer."
+        }
+      ]
+    },
+    processingTime: "TRV: 2-8 weeks; eTA: Minutes to hours; Border decision: At entry",
+    fees: "TRV: $100 CAD; eTA: $7 CAD; No additional business visitor fees",
+    faqs: [
+      {
+        question: "What business activities are permitted?",
+        answer: "Permitted activities include meetings, conferences, training, market research, contract negotiations, after-sales service, and trade show participation without competing with Canadian workers."
+      },
+      {
+        question: "Do I need a work permit for business visits?",
+        answer: "No work permit is needed for qualifying business visitor activities, but the distinction between business visiting and working must be clearly established."
+      },
+      {
+        question: "How long can I stay as a business visitor?",
+        answer: "Business visitor status is typically granted for up to 6 months, but the specific duration depends on the nature of business activities and officer assessment."
+      }
+    ]
+  },
+  {
+    id: "visit-and-work",
+    title: "Visit and Work (ages 18-35)",
+    slug: "visit-and-work",
+    metaTitle: "Canada Working Holiday Visa - IEC Program for Ages 18-35 | Youth Mobility",
+    metaDescription: "Complete guide to Canada's International Experience Canada (IEC) working holiday program. Expert assistance for youth aged 18-35 seeking work and travel opportunities.",
+    keywords: ["working holiday Canada", "IEC program", "youth mobility", "work and travel Canada", "working holiday visa", "International Experience Canada"],
+    hero: {
+      title: "Visit and Work in Canada (Ages 18-35)",
+      description: "Explore Canada through the International Experience Canada program. Get expert guidance for working holiday opportunities combining travel and work experience."
+    },
+    overview: {
+      title: "International Experience Canada (IEC)",
+      content: [
+        "The International Experience Canada (IEC) program offers young adults aged 18-35 the opportunity to work and travel in Canada through three categories: Working Holiday, Young Professionals, and International Co-op (Internship).",
+        "Working Holiday visas allow eligible youth to work for any employer while exploring Canada, typically for 12-24 months depending on country agreements. This program promotes cultural exchange and provides valuable international work experience.",
+        "Participation depends on bilateral youth mobility agreements between Canada and eligible countries, with specific quotas and requirements varying by nationality and program category."
+      ]
+    },
+    eligibility: {
+      title: "IEC Program Requirements",
+      requirements: [
+        "Age 18-35 at time of application (varies by country)",
+        "Citizen of country with IEC agreement with Canada",
+        "Valid passport from eligible country",
+        "Sufficient funds for initial stay (typically $2,500 CAD)",
+        "Health insurance coverage for duration of stay",
+        "No criminal record and pass security clearance",
+        "Meet medical examination requirements if required",
+        "Intent to primarily travel with work as secondary purpose"
+      ]
+    },
+    process: {
+      title: "IEC Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Check Eligibility",
+          description: "Verify country participation, age requirements, and available quotas for your nationality."
+        },
+        {
+          step: 2,
+          title: "Create Profile",
+          description: "Submit initial profile in IEC system during intake periods when pools are open."
+        },
+        {
+          step: 3,
+          title: "Invitation to Apply",
+          description: "Wait for invitation to apply if selected from pool system (random selection process)."
+        },
+        {
+          step: 4,
+          title: "Complete Application",
+          description: "Submit complete application within 20 days of receiving invitation with all required documents."
+        },
+        {
+          step: 5,
+          title: "Port of Entry Letter",
+          description: "Receive port of entry letter and activate work permit upon arrival in Canada."
+        }
+      ]
+    },
+    processingTime: "Profile creation: Immediate; Invitation wait: Varies; Application processing: 8-12 weeks",
+    fees: "$161 CAD participation fee plus biometrics fees if required",
+    faqs: [
+      {
+        question: "Which countries participate in IEC?",
+        answer: "Over 35 countries participate including UK, Australia, France, Germany, Japan, South Korea, and many others. Each has specific agreements and quotas."
+      },
+      {
+        question: "Can I bring my spouse or children?",
+        answer: "IEC is for individuals only. Spouses and children would need separate applications and aren't automatically included in IEC work permits."
+      },
+      {
+        question: "What if I'm not selected from the pool?",
+        answer: "You can resubmit your profile in subsequent intake rounds if eligible, but there's no guarantee of selection due to limited quotas."
+      }
+    ]
+  },
+  {
+    id: "temporary-resident-visa",
+    title: "Temporary Resident Visa",
+    slug: "temporary-resident-visa",
+    metaTitle: "Temporary Resident Visa Canada (TRV) - Complete Application Guide | Immigration Lawyers",
+    metaDescription: "Complete guide to Canada Temporary Resident Visa (TRV) applications. Expert assistance with visitor visa requirements, documentation, and application process.",
+    keywords: ["Temporary Resident Visa", "TRV Canada", "visitor visa Canada", "tourist visa", "Canada TRV application", "visitor permit Canada"],
+    hero: {
+      title: "Temporary Resident Visa (TRV) Canada",
+      description: "Secure your Temporary Resident Visa for Canada with expert guidance. Comprehensive assistance for visitor visa applications and documentation requirements."
+    },
+    overview: {
+      title: "Understanding Temporary Resident Visa",
+      content: [
+        "A Temporary Resident Visa (TRV) is an official document placed in your passport by a Canadian visa office, allowing foreign nationals to enter Canada temporarily as visitors, students, or workers. It serves as evidence that you've met admission requirements.",
+        "TRVs are required for citizens of countries that don't have visa-exempt status with Canada. The visa shows you're authorized to travel to Canada, but final entry decision remains with border services officers upon arrival.",
+        "Temporary Resident Visas can be single-entry or multiple-entry, with validity periods varying based on individual circumstances, passport validity, and officer discretion typically ranging from 6 months to 10 years."
+      ]
+    },
+    eligibility: {
+      title: "TRV Requirements",
+      requirements: [
+        "Valid passport or travel document",
+        "Sufficient funds for stay and return journey",
+        "Strong ties to home country ensuring return",
+        "Clear purpose for visit to Canada",
+        "No criminal record or security concerns",
+        "Medical examination if required",
+        "Intention to leave Canada at end of authorized stay",
+        "Meet any additional requirements specific to visit purpose"
+      ]
+    },
+    process: {
+      title: "TRV Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Determine Need for TRV",
+          description: "Check if your country requires TRV or if you're eligible for eTA or visa-exempt travel."
+        },
+        {
+          step: 2,
+          title: "Gather Documents",
+          description: "Collect passport, photos, financial documents, invitation letters, and supporting materials."
+        },
+        {
+          step: 3,
+          title: "Complete Application",
+          description: "Fill out application forms online or on paper with accurate and complete information."
+        },
+        {
+          step: 4,
+          title: "Pay Fees and Submit",
+          description: "Pay processing fees and submit application online or at visa application center."
+        },
+        {
+          step: 5,
+          title: "Biometrics and Interview",
+          description: "Provide biometrics if required and attend interview if requested by visa office."
+        },
+        {
+          step: 6,
+          title: "Decision and Travel",
+          description: "Receive decision and if approved, travel to Canada with valid TRV in passport."
+        }
+      ]
+    },
+    processingTime: "2-8 weeks depending on country and application complexity",
+    fees: "$100 CAD per person plus biometrics fees if required",
+    faqs: [
+      {
+        question: "How long is a TRV valid?",
+        answer: "TRV validity varies but typically ranges from 6 months to 10 years or until passport expires. Multiple-entry visas allow repeated travel during validity period."
+      },
+      {
+        question: "Can I extend my stay in Canada?",
+        answer: "Yes, you can apply to extend your stay as a visitor from within Canada before your current status expires, though approval isn't guaranteed."
+      },
+      {
+        question: "What's the difference between TRV and visitor record?",
+        answer: "A TRV allows entry to Canada, while a visitor record is issued at the border or when extending stay, showing your authorized period of stay."
+      }
+    ]
+  },
+  {
+    id: "eta-electronic-travel-authorization",
+    title: "eTA (electronic Travel Authorization)",
+    slug: "eta-electronic-travel-authorization",
+    metaTitle: "eTA Canada - Electronic Travel Authorization Application | Complete Guide",
+    metaDescription: "Complete guide to Canada eTA (electronic Travel Authorization) application. Quick and easy eTA application process for visa-exempt country citizens visiting Canada.",
+    keywords: ["eTA Canada", "electronic Travel Authorization", "Canada eTA application", "visa exempt travel", "eTA requirements", "Canada travel authorization"],
+    hero: {
+      title: "eTA (electronic Travel Authorization)",
+      description: "Apply for your Canada eTA quickly and easily. Get expert guidance for electronic Travel Authorization requirements and application process for visa-exempt visitors."
+    },
+    overview: {
+      title: "What is eTA?",
+      content: [
+        "Electronic Travel Authorization (eTA) is a digital travel authorization for visa-exempt foreign nationals flying to Canada. It's linked electronically to your passport and is valid for up to five years or until passport expires, whichever comes first.",
+        "eTA allows multiple short-term visits to Canada, typically up to 6 months per visit for tourism, business, or transit purposes. It's required for most visa-exempt travelers arriving by air, but not for land or sea border crossings.",
+        "The application process is simple, conducted entirely online, and most applications are approved within minutes. However, some applications may require additional documentation and take longer to process."
+      ]
+    },
+    eligibility: {
+      title: "eTA Requirements",
+      requirements: [
+        "Citizen of visa-exempt country (except USA)",
+        "Valid passport from eligible country",
+        "Arriving in Canada by air",
+        "Valid email address for confirmation",
+        "Credit or debit card for payment",
+        "No criminal record or immigration violations",
+        "Not planning to work or study in Canada",
+        "Visiting for tourism, business, or transit purposes"
+      ]
+    },
+    process: {
+      title: "eTA Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Check Eligibility",
+          description: "Verify your country's visa-exempt status and eTA requirements for air travel to Canada."
+        },
+        {
+          step: 2,
+          title: "Gather Information",
+          description: "Have passport, contact details, employment information, and credit card ready for application."
+        },
+        {
+          step: 3,
+          title: "Complete Online Form",
+          description: "Fill out eTA application form on official IRCC website with accurate information."
+        },
+        {
+          step: 4,
+          title: "Pay Application Fee",
+          description: "Pay $7 CAD processing fee using credit or debit card through secure payment system."
+        },
+        {
+          step: 5,
+          title: "Receive Confirmation",
+          description: "Get email confirmation with eTA approval status and travel authorization details."
+        }
+      ]
+    },
+    processingTime: "Most applications: Minutes to hours; Complex cases: Several days",
+    fees: "$7 CAD per application",
+    faqs: [
+      {
+        question: "Do I need eTA if I'm just transiting through Canada?",
+        answer: "Yes, most visa-exempt travelers need eTA even for transit flights through Canadian airports, unless you qualify for specific transit exemptions."
+      },
+      {
+        question: "Can I work or study with eTA?",
+        answer: "No, eTA is for temporary visits only. You cannot work or study in Canada with eTA authorization - separate permits are required."
+      },
+      {
+        question: "What if my eTA application is denied?",
+        answer: "If eTA is denied, you may need to apply for a visitor visa instead. The refusal email will provide information about alternative options."
       }
     ]
   }
