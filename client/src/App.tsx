@@ -17,6 +17,7 @@ import CriminalLaw from "@/pages/CriminalLaw";
 import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
 import WorkPermitPage from "@/pages/WorkPermitPage";
+import StudyPage from "@/pages/StudyPage";
 import Layout from "@/components/Layout";
 
 function Router() {
@@ -36,6 +37,7 @@ function Router() {
         <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
         <Route path="/work-permits/:slug" component={WorkPermitPage} />
+        <Route path="/study/:slug" component={StudyPage} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

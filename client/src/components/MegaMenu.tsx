@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { ChevronDown, Scale, Home as HomeIcon, Gavel, FileText, Briefcase } from "lucide-react";
+import { ChevronDown, Scale, Home as HomeIcon, Gavel, FileText, Briefcase, GraduationCap } from "lucide-react";
 import { practiceAreas } from "@shared/workPermits";
 
 interface MegaMenuProps {
@@ -25,6 +25,8 @@ export default function MegaMenu({ onClose }: MegaMenuProps) {
         return <FileText className="w-5 h-5" />;
       case "Work Permits":
         return <Briefcase className="w-5 h-5" />;
+      case "Study":
+        return <GraduationCap className="w-5 h-5" />;
       default:
         return <Scale className="w-5 h-5" />;
     }
@@ -137,6 +139,8 @@ export function MobilePracticeAreasMenu({ onClose }: MegaMenuProps) {
         return <FileText className="w-5 h-5" />;
       case "Work Permits":
         return <Briefcase className="w-5 h-5" />;
+      case "Study":
+        return <GraduationCap className="w-5 h-5" />;
       default:
         return <Scale className="w-5 h-5" />;
     }

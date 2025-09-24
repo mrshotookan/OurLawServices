@@ -33,6 +33,41 @@ export interface WorkPermitPage {
   }>;
 }
 
+export interface StudyPage {
+  id: string;
+  title: string;
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  hero: {
+    title: string;
+    description: string;
+  };
+  overview: {
+    title: string;
+    content: string[];
+  };
+  eligibility: {
+    title: string;
+    requirements: string[];
+  };
+  process: {
+    title: string;
+    steps: Array<{
+      step: number;
+      title: string;
+      description: string;
+    }>;
+  };
+  processingTime: string;
+  fees: string;
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
 export const workPermitPages: WorkPermitPage[] = [
   {
     id: "lmia-work-permits",
@@ -954,6 +989,429 @@ export const workPermitPages: WorkPermitPage[] = [
   }
 ];
 
+export const studyPages: StudyPage[] = [
+  {
+    id: "student-visa",
+    title: "Student Visa",
+    slug: "student-visa",
+    metaTitle: "Student Visa Canada - Study Permit Application | Expert Immigration Lawyers",
+    metaDescription: "Get comprehensive help with Canadian student visa applications. Our immigration lawyers provide expert guidance on study permits with high success rates for international students.",
+    keywords: ["student visa Canada", "study permit application", "Canadian student visa", "international student visa", "study in Canada"],
+    hero: {
+      title: "Student Visa (Study Permit) Canada",
+      description: "Transform your educational dreams into reality with expert guidance on Canadian student visa applications. We help international students secure study permits efficiently and successfully."
+    },
+    overview: {
+      title: "What is a Canadian Student Visa?",
+      content: [
+        "A Canadian student visa, officially called a study permit, is a document issued by Immigration, Refugees and Citizenship Canada (IRCC) that allows foreign nationals to study at designated learning institutions in Canada.",
+        "The study permit serves as your authorization to remain in Canada as a student for the duration of your program. Most international students also need a temporary resident visa (visitor visa) or electronic travel authorization (eTA) to enter Canada.",
+        "With a study permit, you may be eligible to work part-time while studying and full-time during scheduled breaks. After graduation, you may qualify for a Post-Graduation Work Permit (PGWP)."
+      ]
+    },
+    eligibility: {
+      title: "Student Visa Eligibility Requirements",
+      requirements: [
+        "Acceptance letter from designated learning institution (DLI)",
+        "Proof of financial support for tuition and living expenses",
+        "No criminal record and provide police certificates if required",
+        "Medical examination (if required based on country of origin)",
+        "Letter of explanation outlining study plans and career goals",
+        "Proof of ties to home country (intention to return after studies)",
+        "Language proficiency scores if required by institution",
+        "Payment of application fees and biometrics"
+      ]
+    },
+    process: {
+      title: "Student Visa Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Get Acceptance from DLI",
+          description: "Apply and receive acceptance letter from a designated learning institution approved by the Canadian government."
+        },
+        {
+          step: 2,
+          title: "Gather Required Documents",
+          description: "Collect all necessary documents including financial proof, academic transcripts, and identity documents."
+        },
+        {
+          step: 3,
+          title: "Complete Online Application",
+          description: "Submit study permit application online through IRCC portal with all supporting documents."
+        },
+        {
+          step: 4,
+          title: "Pay Fees and Provide Biometrics",
+          description: "Pay application fees and attend biometrics appointment at designated service location."
+        },
+        {
+          step: 5,
+          title: "Medical Exam (if required)",
+          description: "Complete medical examination by panel physician if required based on your country of residence."
+        },
+        {
+          step: 6,
+          title: "Receive Decision and Travel",
+          description: "Upon approval, receive study permit and make travel arrangements to Canada."
+        }
+      ]
+    },
+    processingTime: "4-12 weeks (varies by country of residence)",
+    fees: "$150 CAD study permit fee + $85 CAD biometrics fee",
+    faqs: [
+      {
+        question: "How much money do I need to show for a Canadian student visa?",
+        answer: "You need to show proof of funds covering tuition fees plus $10,000 CAD per year for living expenses ($11,000 CAD for Quebec residents). Additional funds required for accompanying family members."
+      },
+      {
+        question: "Can I work while studying in Canada?",
+        answer: "Yes, most international students can work up to 20 hours per week during academic sessions and full-time during scheduled breaks without needing a separate work permit."
+      },
+      {
+        question: "How long is a study permit valid?",
+        answer: "Study permits are typically valid for the length of your program plus 90 days. The permit allows you to remain in Canada until you apply for another permit or leave the country."
+      }
+    ]
+  },
+  {
+    id: "student-visa-refusal",
+    title: "Student Visa Refusal",
+    slug: "student-visa-refusal",
+    metaTitle: "Student Visa Refusal Canada - Reasons and Solutions | Immigration Appeal Lawyers",
+    metaDescription: "Overcome Canadian student visa refusal with expert legal help. Our immigration lawyers analyze refusal reasons and develop successful reapplication strategies for international students.",
+    keywords: ["student visa refusal Canada", "study permit denied", "visa refusal reasons", "student visa appeal", "reapplication strategy"],
+    hero: {
+      title: "Student Visa Refusal - Expert Solutions",
+      description: "Don't let a student visa refusal end your Canadian education dreams. Our experienced immigration lawyers analyze refusal reasons and develop winning reapplication strategies."
+    },
+    overview: {
+      title: "Understanding Student Visa Refusals",
+      content: [
+        "Student visa refusals are unfortunately common, with various factors contributing to negative decisions. Understanding the specific reasons for refusal is crucial for developing an effective response strategy.",
+        "Common refusal reasons include insufficient financial proof, weak ties to home country, unconvincing study plans, or concerns about the applicant's intention to leave Canada after studies.",
+        "A refusal is not permanent, and with proper analysis and preparation, many applicants successfully obtain approval on subsequent applications."
+      ]
+    },
+    eligibility: {
+      title: "Common Student Visa Refusal Reasons",
+      requirements: [
+        "Insufficient financial resources or proof of funding",
+        "Weak ties to home country - concern about returning",
+        "Unconvincing letter of explanation or study plan",
+        "Academic background not aligned with chosen program",
+        "Previous immigration violations or overstay",
+        "Incomplete or inconsistent documentation",
+        "Medical inadmissibility or failure to complete medical exam",
+        "Security concerns or criminal background issues"
+      ]
+    },
+    process: {
+      title: "Addressing Student Visa Refusal",
+      steps: [
+        {
+          step: 1,
+          title: "Analyze Refusal Letter",
+          description: "Carefully review the refusal letter to understand specific concerns raised by the visa officer."
+        },
+        {
+          step: 2,
+          title: "Assess Your Situation",
+          description: "Evaluate your circumstances and documentation to identify weaknesses in the original application."
+        },
+        {
+          step: 3,
+          title: "Strengthen Documentation",
+          description: "Address identified weaknesses by gathering additional evidence and improving supporting documents."
+        },
+        {
+          step: 4,
+          title: "Develop New Strategy",
+          description: "Create comprehensive reapplication strategy addressing all refusal concerns with stronger evidence."
+        },
+        {
+          step: 5,
+          title: "Resubmit Application",
+          description: "Submit new application with improved documentation and compelling responses to previous concerns."
+        },
+        {
+          step: 6,
+          title: "Consider Professional Help",
+          description: "Consult immigration lawyer for complex cases or multiple refusals to maximize approval chances."
+        }
+      ]
+    },
+    processingTime: "Reapplication: 4-12 weeks (same as initial application)",
+    fees: "Full application fees apply for reapplication",
+    faqs: [
+      {
+        question: "Can I reapply immediately after a student visa refusal?",
+        answer: "Yes, you can reapply immediately. However, it's advisable to address the refusal reasons first and strengthen your application before resubmitting."
+      },
+      {
+        question: "Will a student visa refusal affect future applications?",
+        answer: "A refusal doesn't automatically affect future applications, but you must declare it. Properly addressing refusal reasons actually strengthens subsequent applications."
+      },
+      {
+        question: "Should I change my program or school after a refusal?",
+        answer: "Not necessarily. The issue is usually with the application presentation rather than program choice. However, if the program doesn't align with your background, consider adjustments."
+      }
+    ]
+  },
+  {
+    id: "appeal-refused-study-permit",
+    title: "Can I Appeal my Refused Study Permit?",
+    slug: "appeal-refused-study-permit",
+    metaTitle: "Appeal Refused Study Permit Canada - Legal Options and Process | Immigration Appeal Lawyers",
+    metaDescription: "Learn about options after study permit refusal in Canada. Expert immigration lawyers explain appeal processes, judicial review, and alternative strategies for international students.",
+    keywords: ["appeal study permit refusal", "judicial review study permit", "immigration appeal Canada", "study permit refusal options", "visa appeal process"],
+    hero: {
+      title: "Appealing a Refused Study Permit",
+      description: "Explore your legal options after a study permit refusal. Understanding appeal processes and alternative strategies can help you achieve your Canadian education goals."
+    },
+    overview: {
+      title: "Study Permit Refusal Appeal Options",
+      content: [
+        "Unlike some immigration programs, there is no traditional 'appeal' process for refused study permit applications. However, several options exist to challenge a negative decision or pursue alternative paths.",
+        "The primary legal remedy is judicial review through the Federal Court of Canada, which reviews whether the decision was made according to law and procedural fairness.",
+        "Most commonly, applicants choose to reapply with strengthened documentation rather than pursuing costly and time-consuming legal proceedings."
+      ]
+    },
+    eligibility: {
+      title: "Options After Study Permit Refusal",
+      requirements: [
+        "Judicial Review: Challenge decision-making process in Federal Court",
+        "Reapplication: Submit new application with improved documentation",
+        "Reconsideration request: Limited circumstances only",
+        "Access to Information request: Obtain detailed case notes",
+        "Ministerial intervention: Exceptional humanitarian cases",
+        "Legal consultation: Assess viability of different options",
+        "Alternative programs: Consider different institutions or programs",
+        "Temporary resident permit: Special circumstances"
+      ]
+    },
+    process: {
+      title: "Judicial Review Process",
+      steps: [
+        {
+          step: 1,
+          title: "Assess Grounds for Review",
+          description: "Determine if there are legal grounds such as procedural unfairness or unreasonable decision-making."
+        },
+        {
+          step: 2,
+          title: "File Application Promptly",
+          description: "Submit Federal Court application within strict 15-day deadline from refusal decision."
+        },
+        {
+          step: 3,
+          title: "Obtain Case Documentation",
+          description: "Request certified tribunal record and detailed case notes from IRCC through court process."
+        },
+        {
+          step: 4,
+          title: "Legal Arguments Preparation",
+          description: "Develop legal arguments challenging the decision-making process and evidence consideration."
+        },
+        {
+          step: 5,
+          title: "Court Proceedings",
+          description: "Participate in court hearings where judge reviews the administrative decision for legal errors."
+        },
+        {
+          step: 6,
+          title: "Court Decision",
+          description: "Receive court judgment which may uphold refusal or order new decision by different officer."
+        }
+      ]
+    },
+    processingTime: "Judicial review: 6-18 months; Reapplication: 4-12 weeks",
+    fees: "Federal Court filing fee: $50 CAD; Legal costs: $3,000-$10,000+",
+    faqs: [
+      {
+        question: "What is the success rate for study permit judicial reviews?",
+        answer: "Success rates are relatively low (15-25%) as courts only review legal process, not the merits of the decision. Most cases are better served by reapplication."
+      },
+      {
+        question: "Can I continue studying while pursuing judicial review?",
+        answer: "No, judicial review doesn't provide legal status in Canada. You cannot study without a valid study permit regardless of pending legal proceedings."
+      },
+      {
+        question: "Should I appeal or reapply after study permit refusal?",
+        answer: "Generally, reapplication is faster, less expensive, and more likely to succeed. Judicial review should only be considered when there are clear legal errors in the decision-making process."
+      }
+    ]
+  },
+  {
+    id: "visa-refusal-rates",
+    title: "Visa Refusal Rates",
+    slug: "visa-refusal-rates",
+    metaTitle: "Canada Visa Refusal Rates by Country - Student and Visitor Visa Statistics | Immigration Data",
+    metaDescription: "Understand Canada visa refusal rates by country and visa type. Expert analysis of student visa, visitor visa, and work permit approval statistics to improve application success.",
+    keywords: ["Canada visa refusal rates", "student visa approval rates", "visitor visa statistics", "immigration refusal rates by country", "visa success rates"],
+    hero: {
+      title: "Canadian Visa Refusal Rates Analysis",
+      description: "Understanding visa refusal rates by country and application type helps you prepare stronger applications. Get expert insights into approval trends and success factors."
+    },
+    overview: {
+      title: "Understanding Visa Refusal Statistics",
+      content: [
+        "Canadian visa refusal rates vary significantly by country of origin, visa type, and application quality. These statistics provide valuable insights for prospective applicants planning their immigration strategy.",
+        "Student visa refusal rates have historically ranged from 15% to 60% depending on the applicant's country, with higher refusal rates often correlating with economic factors and previous overstay patterns.",
+        "Understanding these patterns helps applicants prepare more comprehensive applications and address common concerns that lead to refusals."
+      ]
+    },
+    eligibility: {
+      title: "Factors Affecting Refusal Rates",
+      requirements: [
+        "Country of origin and economic stability",
+        "Previous visa compliance history (country-specific)",
+        "Application completeness and documentation quality",
+        "Financial proof adequacy and source verification",
+        "Ties to home country strength",
+        "Educational background alignment with program choice",
+        "Age and profile consistency with study/visit plans",
+        "Immigration history and previous refusals"
+      ]
+    },
+    process: {
+      title: "Using Refusal Rate Data Effectively",
+      steps: [
+        {
+          step: 1,
+          title: "Research Your Country's Rates",
+          description: "Review official statistics for your country's approval rates for your specific visa category."
+        },
+        {
+          step: 2,
+          title: "Identify Common Refusal Reasons",
+          description: "Study typical refusal patterns for applicants from your region and demographic."
+        },
+        {
+          step: 3,
+          title: "Strengthen Weak Areas",
+          description: "Address common concerns proactively in your application preparation."
+        },
+        {
+          step: 4,
+          title: "Document Everything Thoroughly",
+          description: "Provide comprehensive documentation exceeding minimum requirements to overcome statistical biases."
+        },
+        {
+          step: 5,
+          title: "Consider Professional Help",
+          description: "If from high-refusal rate country, consider expert assistance to navigate additional scrutiny."
+        },
+        {
+          step: 6,
+          title: "Plan Alternative Strategies",
+          description: "Develop backup plans including different programs or delayed applications if initial attempt fails."
+        }
+      ]
+    },
+    processingTime: "Research phase: 1-2 weeks; Application improvement: varies",
+    fees: "No fees for research; application fees vary by visa type",
+    faqs: [
+      {
+        question: "Which countries have the highest student visa refusal rates for Canada?",
+        answer: "Historically, countries with higher refusal rates include those with economic challenges or high overstay patterns. However, well-prepared applications from any country can succeed."
+      },
+      {
+        question: "Do refusal rates change over time?",
+        answer: "Yes, refusal rates fluctuate based on economic conditions, policy changes, and bilateral relationships. Recent statistics are more relevant than historical data."
+      },
+      {
+        question: "Can I overcome high refusal rates from my country?",
+        answer: "Absolutely. Strong applications with comprehensive documentation, clear ties to home country, and compelling study/visit plans succeed regardless of country-specific statistics."
+      }
+    ]
+  },
+  {
+    id: "refused-pgwp",
+    title: "Refused PGWP",
+    slug: "refused-pgwp",
+    metaTitle: "Refused PGWP Canada - Post-Graduation Work Permit Refusal Solutions | Immigration Lawyers",
+    metaDescription: "Overcome refused PGWP applications in Canada. Expert immigration lawyers analyze refusal reasons and develop strategies for post-graduation work permit success.",
+    keywords: ["refused PGWP", "post graduation work permit refusal", "PGWP denial reasons", "PGWP appeal", "graduate work permit refusal"],
+    hero: {
+      title: "Refused PGWP - Expert Solutions",
+      description: "A refused Post-Graduation Work Permit doesn't end your career prospects in Canada. Our immigration experts help analyze refusal reasons and explore available options."
+    },
+    overview: {
+      title: "Understanding PGWP Refusals",
+      content: [
+        "Post-Graduation Work Permit (PGWP) refusals can be devastating for international graduates who have invested significantly in Canadian education. Understanding refusal reasons is crucial for determining next steps.",
+        "Common PGWP refusal reasons include eligibility issues, documentation problems, timing concerns, or changes in immigration policies affecting specific programs or institutions.",
+        "While PGWP is typically a one-time opportunity, certain circumstances may allow for reconsideration or alternative pathways to work authorization in Canada."
+      ]
+    },
+    eligibility: {
+      title: "Common PGWP Refusal Reasons",
+      requirements: [
+        "Institution not eligible for PGWP at time of study",
+        "Program duration less than 8 months",
+        "Applied more than 180 days after graduation",
+        "Study permit expired before graduation",
+        "Part-time studies or unauthorized absence from studies",
+        "Previously received PGWP (one per lifetime rule)",
+        "Incomplete documentation or missing transcripts",
+        "Online studies exceeding permitted limits"
+      ]
+    },
+    process: {
+      title: "Options After PGWP Refusal",
+      steps: [
+        {
+          step: 1,
+          title: "Analyze Refusal Letter",
+          description: "Carefully review refusal reasons to understand specific grounds for denial."
+        },
+        {
+          step: 2,
+          title: "Verify Eligibility Requirements",
+          description: "Cross-reference your situation against PGWP eligibility criteria to identify discrepancies."
+        },
+        {
+          step: 3,
+          title: "Gather Additional Evidence",
+          description: "Collect any missing documentation that might support your eligibility claim."
+        },
+        {
+          step: 4,
+          title: "Consider Reconsideration",
+          description: "If eligibility error occurred, submit reconsideration request with additional evidence."
+        },
+        {
+          step: 5,
+          title: "Explore Alternative Options",
+          description: "Research other work permit categories or pathways if PGWP is not available."
+        },
+        {
+          step: 6,
+          title: "Legal Consultation",
+          description: "Consult immigration lawyer for complex cases or potential judicial review options."
+        }
+      ]
+    },
+    processingTime: "Reconsideration: 2-4 months; Alternative permits: varies",
+    fees: "No fees for reconsideration; other permit fees apply",
+    faqs: [
+      {
+        question: "Can I reapply for PGWP after refusal?",
+        answer: "Generally no, as PGWP is a one-time opportunity. However, if the refusal was due to officer error and you're still within eligibility timeframes, reconsideration may be possible."
+      },
+      {
+        question: "What work permit options exist after PGWP refusal?",
+        answer: "Alternatives include employer-specific work permits with LMIA, spouse work permits (if applicable), or bridging open work permits for pending permanent residence applications."
+      },
+      {
+        question: "Can I challenge a PGWP refusal in court?",
+        answer: "Judicial review is possible within 15 days of refusal, but success rates are low unless there are clear procedural errors or unreasonable decision-making."
+      }
+    ]
+  }
+];
+
 export const practiceAreas = [
   {
     title: "Immigration Law",
@@ -984,5 +1442,32 @@ export const practiceAreas = [
       href: `/work-permits/${page.slug}`,
       description: page.hero.description
     }))
+  },
+  {
+    title: "Study",
+    href: "/study",
+    description: "Student visas and study permits in Canada",
+    subItems: [
+      ...studyPages.map(page => ({
+        title: page.title,
+        href: `/study/${page.slug}`,
+        description: page.hero.description
+      })),
+      {
+        title: "Work while Studying",
+        href: "/work-permits/work-while-studying",
+        description: "Work authorization for international students in Canada"
+      },
+      {
+        title: "Post Graduate Work Permit (PGWP)",
+        href: "/work-permits/post-graduation-work-permit",
+        description: "Open work permits for international graduates"
+      },
+      {
+        title: "PGWP Eligibility",
+        href: "/work-permits/pgwp-eligibility", 
+        description: "Detailed requirements for Post-Graduation Work Permit qualification"
+      }
+    ]
   }
 ];
