@@ -77,23 +77,6 @@ export default function MegaMenu({ onClose }: MegaMenuProps) {
                   </div>
                 </Link>
 
-                {area.subItems && (
-                  <ul className="ml-6 space-y-1 mt-3">
-                    {area.subItems.map((subItem) => (
-                      <li key={subItem.href}>
-                        <Link
-                          href={subItem.href}
-                          className="flex items-center px-3 py-2 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/30 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground hover:shadow-sm"
-                          onClick={handleLinkClick}
-                          data-testid={`mega-menu-${subItem.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        >
-                          <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-2 group-hover:bg-primary transition-colors"></span>
-                          {subItem.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
               </div>
             ))}
           </div>
@@ -186,23 +169,6 @@ export function MobilePracticeAreasMenu({ onClose }: MegaMenuProps) {
                 </div>
               </Link>
 
-              {area.subItems && (
-                <ul className="bg-background/30 mx-2 mb-2 rounded-lg border border-border/20">
-                  {area.subItems.map((subItem) => (
-                    <li key={subItem.href}>
-                      <Link
-                        href={subItem.href}
-                        className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-background/60 hover:bg-primary/10 hover:text-primary border border-border/20 hover:border-primary/20 rounded-md transition-all duration-200 text-muted-foreground"
-                        onClick={handleLinkClick}
-                        data-testid={`mobile-mega-menu-${subItem.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      >
-                        <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mr-3"></span>
-                        {subItem.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
             </div>
           ))}
 

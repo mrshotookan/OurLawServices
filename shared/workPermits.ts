@@ -1432,42 +1432,46 @@ export const practiceAreas = [
     title: "Wills & Power of Attorney",
     href: "/wills-power-of-attorney",
     description: "Estate planning and legal documentation"
-  },
-  {
-    title: "Work Permits",
-    href: "/work-permits",
-    description: "All types of Canadian work permits",
-    subItems: workPermitPages.map(page => ({
-      title: page.title,
-      href: `/work-permits/${page.slug}`,
-      description: page.hero.description
-    }))
-  },
-  {
-    title: "Study",
-    href: "/study",
-    description: "Student visas and study permits in Canada",
-    subItems: [
-      ...studyPages.map(page => ({
-        title: page.title,
-        href: `/study/${page.slug}`,
-        description: page.hero.description
-      })),
-      {
-        title: "Work while Studying",
-        href: "/work-permits/work-while-studying",
-        description: "Work authorization for international students in Canada"
-      },
-      {
-        title: "Post Graduate Work Permit (PGWP)",
-        href: "/work-permits/post-graduation-work-permit",
-        description: "Open work permits for international graduates"
-      },
-      {
-        title: "PGWP Eligibility",
-        href: "/work-permits/pgwp-eligibility", 
-        description: "Detailed requirements for Post-Graduation Work Permit qualification"
-      }
-    ]
   }
 ];
+
+// Work Permits navigation data
+export const workPermitsNav = {
+  title: "Work Permits",
+  href: "/work-permits",
+  description: "All types of Canadian work permits",
+  subItems: workPermitPages.map(page => ({
+    title: page.title,
+    href: `/work-permits/${page.slug}`,
+    description: page.hero.description
+  }))
+};
+
+// Study navigation data
+export const studyNav = {
+  title: "Study",
+  href: "/study",
+  description: "Student visas and study permits in Canada",
+  subItems: [
+    ...studyPages.map(page => ({
+      title: page.title,
+      href: `/study/${page.slug}`,
+      description: page.hero.description
+    })),
+    {
+      title: "Work while Studying",
+      href: "/work-permits/work-while-studying",
+      description: "Work authorization for international students in Canada"
+    },
+    {
+      title: "Post Graduate Work Permit (PGWP)",
+      href: "/work-permits/post-graduation-work-permit",
+      description: "Open work permits for international graduates"
+    },
+    {
+      title: "PGWP Eligibility",
+      href: "/work-permits/pgwp-eligibility", 
+      description: "Detailed requirements for Post-Graduation Work Permit qualification"
+    }
+  ]
+};
