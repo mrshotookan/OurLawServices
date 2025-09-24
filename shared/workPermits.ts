@@ -103,6 +103,41 @@ export interface VisitPage {
   }>;
 }
 
+export interface BusinessPage {
+  id: string;
+  title: string;
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  hero: {
+    title: string;
+    description: string;
+  };
+  overview: {
+    title: string;
+    content: string[];
+  };
+  eligibility: {
+    title: string;
+    requirements: string[];
+  };
+  process: {
+    title: string;
+    steps: Array<{
+      step: number;
+      title: string;
+      description: string;
+    }>;
+  };
+  processingTime: string;
+  fees: string;
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
 export const workPermitPages: WorkPermitPage[] = [
   {
     id: "lmia-work-permits",
@@ -2181,6 +2216,286 @@ export const visitPages: VisitPage[] = [
   }
 ];
 
+export const businessPages: BusinessPage[] = [
+  {
+    id: "business-visitor",
+    title: "Business Visitor",
+    slug: "business-visitor",
+    metaTitle: "Canada Business Visitor Visa - Temporary Business Entry Requirements | Immigration Lawyers",
+    metaDescription: "Complete guide to Canada business visitor visa requirements. Expert assistance with temporary business entry, documentation, and application process for commercial activities.",
+    keywords: ["Canada business visitor", "business visa Canada", "temporary business entry", "business visitor permit", "commercial activities Canada", "business meetings Canada"],
+    hero: {
+      title: "Canada Business Visitor Program",
+      description: "Enter Canada temporarily for business activities without a work permit. Get expert guidance for business visitor applications and commercial entry requirements."
+    },
+    overview: {
+      title: "Understanding Business Visitor Status",
+      content: [
+        "Canada's Business Visitor Program allows foreign nationals to enter temporarily for specific business activities without requiring a work permit. This includes attending meetings, conferences, training sessions, conducting market research, negotiating contracts, and participating in trade shows.",
+        "Business visitors must demonstrate that their primary source of remuneration and employment remains outside Canada, with activities limited to permitted business functions. The visit must be temporary with clear intention to return to their home country upon completion of business activities.",
+        "Eligible activities include international business meetings, conferences, conventions, trade fairs, research activities, after-sales service, independent research, and certain training programs that don't involve entering the Canadian labor market."
+      ]
+    },
+    eligibility: {
+      title: "Business Visitor Requirements",
+      requirements: [
+        "Primary employment and income source remains outside Canada",
+        "Business activities don't compete with Canadian workers or enter Canadian labor market",
+        "Clear temporary purpose for business visit with defined duration",
+        "Sufficient funds to support stay and return journey to home country",
+        "Valid passport and required travel documents (TRV or eTA)",
+        "No criminal record or security concerns affecting admissibility",
+        "Strong ties to home country ensuring return after business activities",
+        "Invitation letter from Canadian business partner or organization (if applicable)",
+        "Documentation proving business relationship or commercial purpose"
+      ]
+    },
+    process: {
+      title: "Business Visitor Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Assess Business Activity Eligibility",
+          description: "Determine if your business activities qualify for business visitor status rather than requiring a work permit."
+        },
+        {
+          step: 2,
+          title: "Gather Business Documentation",
+          description: "Collect invitation letters, business registration, employment verification, and detailed activity descriptions."
+        },
+        {
+          step: 3,
+          title: "Apply for Entry Document",
+          description: "Submit visitor visa (TRV) or electronic travel authorization (eTA) application indicating business purpose."
+        },
+        {
+          step: 4,
+          title: "Prepare for Entry Interview",
+          description: "Be ready to explain business activities, duration, funding source, and ties to home country at port of entry."
+        },
+        {
+          step: 5,
+          title: "Enter Canada and Conduct Business",
+          description: "Present all documentation at border and explain business visit purpose to immigration officer."
+        },
+        {
+          step: 6,
+          title: "Maintain Status and Depart",
+          description: "Conduct only permitted business activities and depart Canada within authorized timeframe."
+        }
+      ]
+    },
+    processingTime: "TRV: 2-8 weeks; eTA: Minutes to hours; Entry decision at border",
+    fees: "TRV: $100 CAD; eTA: $7 CAD; No additional business visitor fees",
+    faqs: [
+      {
+        question: "What business activities are permitted without work permit?",
+        answer: "Permitted activities include meetings, conferences, training, market research, contract negotiations, after-sales service, trade shows, and research that doesn't involve productive work for Canadian employers."
+      },
+      {
+        question: "Can I receive payment from Canadian companies as business visitor?",
+        answer: "Generally no. Business visitors cannot receive payment from Canadian sources or engage in productive work. Reimbursement of reasonable expenses may be acceptable in specific circumstances."
+      },
+      {
+        question: "How long can I stay as business visitor?",
+        answer: "Business visitor status is typically granted for up to 6 months, but the specific duration depends on the nature of business activities and immigration officer's assessment at entry."
+      },
+      {
+        question: "Do I need invitation letter for business visitor entry?",
+        answer: "While not always mandatory, invitation letters from Canadian businesses significantly strengthen applications and help explain the commercial purpose and relationship."
+      }
+    ]
+  },
+  {
+    id: "investor-immigrant",
+    title: "Investor Immigrant",
+    slug: "investor-immigrant",
+    metaTitle: "Canada Investor Immigration Program - Investment-Based Permanent Residency | Immigration Lawyers",
+    metaDescription: "Comprehensive guide to Canada investor immigration programs. Expert assistance with investment-based permanent residency, Quebec Investor Program, and startup visa applications.",
+    keywords: ["Canada investor immigration", "investor visa Canada", "Quebec Investor Program", "startup visa Canada", "investment immigration", "business immigration Canada"],
+    hero: {
+      title: "Canada Investor Immigration Programs",
+      description: "Achieve permanent residency through investment in Canada. Get expert guidance for investor immigration pathways including Quebec Investor Program and federal startup visa."
+    },
+    overview: {
+      title: "Investment-Based Immigration to Canada",
+      content: [
+        "Canada offers several investor immigration programs designed to attract experienced business investors and entrepreneurs who can contribute to economic growth. These programs provide pathways to permanent residency for individuals with significant business experience, investment capital, and intent to establish or invest in Canadian businesses.",
+        "The Quebec Investor Program (QIP) is currently the most established passive investment program, requiring a significant net worth and investment commitment. Federal programs like the Start-up Visa Program target innovative entrepreneurs with support from designated organizations.",
+        "Provincial Nominee Programs (PNPs) also offer various business and investor streams with different investment thresholds, business experience requirements, and regional focuses. Each program has specific eligibility criteria, investment amounts, and application processes tailored to different investor profiles."
+      ]
+    },
+    eligibility: {
+      title: "General Investor Immigration Requirements",
+      requirements: [
+        "Minimum net worth requirements (varies by program: $2M - $10M CAD)",
+        "Proven business or investment management experience (typically 2-5 years)",
+        "Investment commitment in approved instruments or businesses",
+        "Language proficiency in English and/or French (program dependent)",
+        "Education credentials assessment (may be required)",
+        "Clean criminal record and security clearance",
+        "Medical examinations for applicant and family members",
+        "Intent to reside in Canada (or specific province for PNP programs)",
+        "Proof of legal source of funds and wealth accumulation"
+      ]
+    },
+    process: {
+      title: "Investor Immigration Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Program Selection and Assessment",
+          description: "Evaluate different investor programs based on investment capacity, business experience, and residency preferences."
+        },
+        {
+          step: 2,
+          title: "Document Preparation and Due Diligence",
+          description: "Gather extensive financial documentation, business records, and undergo third-party verification of net worth."
+        },
+        {
+          step: 3,
+          title: "Submit Expression of Interest or Application",
+          description: "File initial application with required documents and fees to appropriate program authority."
+        },
+        {
+          step: 4,
+          title: "Interview and Additional Documentation",
+          description: "Attend interview if required and provide additional documentation or clarification as requested."
+        },
+        {
+          step: 5,
+          title: "Investment Commitment and Approval",
+          description: "Make required investment upon program approval and receive confirmation of investment placement."
+        },
+        {
+          step: 6,
+          title: "Permanent Residence Application",
+          description: "Complete federal permanent residence application with medical exams and security clearances."
+        },
+        {
+          step: 7,
+          title: "Landing and Investment Fulfillment",
+          description: "Land in Canada as permanent resident and fulfill ongoing investment and residency obligations."
+        }
+      ]
+    },
+    processingTime: "Quebec Investor: 4-6 years; Start-up Visa: 12-16 months; PNP Business: 18-24 months",
+    fees: "Application fees: $1,500-$15,000 CAD; Investment amounts: $200K-$10M CAD; Professional fees vary",
+    faqs: [
+      {
+        question: "What is the minimum investment for Canada investor immigration?",
+        answer: "Investment requirements vary by program: Start-up Visa requires $200K-$1M from designated investors; Quebec Investor Program requires $1.2M investment; PNP programs range from $200K-$1M depending on province."
+      },
+      {
+        question: "Can I get my investment back in investor immigration?",
+        answer: "Quebec Investor Program investments are returned after 5 years without interest. Start-up Visa investments are at risk as business equity. PNP programs vary - some require loans, others equity investments."
+      },
+      {
+        question: "Do I need to actively manage the business as investor immigrant?",
+        answer: "Requirements vary: Quebec Investor Program is passive investment; Start-up Visa requires active business management; PNP programs typically require active participation in business operations."
+      },
+      {
+        question: "Can my family be included in investor immigration application?",
+        answer: "Yes, spouse and dependent children under 22 can be included in most investor immigration applications and receive permanent residency simultaneously with principal applicant."
+      }
+    ]
+  },
+  {
+    id: "business-pnp",
+    title: "Business PNP",
+    slug: "business-pnp",
+    metaTitle: "Business PNP Canada - Provincial Nominee Program for Entrepreneurs | Immigration Lawyers",
+    metaDescription: "Complete guide to Canada Business PNP programs. Expert assistance with provincial entrepreneur and investor streams for permanent residency through business investment.",
+    keywords: ["Business PNP Canada", "provincial nominee program business", "entrepreneur PNP", "business investment PNP", "provincial business immigration", "PNP entrepreneur stream"],
+    hero: {
+      title: "Business Provincial Nominee Program (PNP)",
+      description: "Achieve permanent residency through provincial business programs. Get expert guidance for entrepreneur and investor streams across Canadian provinces."
+    },
+    overview: {
+      title: "Provincial Business Immigration Programs",
+      content: [
+        "Provincial Nominee Programs (PNPs) offer diverse business and entrepreneur streams designed to attract investment and entrepreneurial talent to specific provinces and territories. Each province has tailored programs reflecting local economic priorities, labor market needs, and investment opportunities.",
+        "Business PNP streams typically require active business ownership or management, with investment thresholds ranging from $100,000 to over $1 million depending on the province and business type. Most programs involve a temporary work permit phase followed by permanent residence nomination upon meeting business performance criteria.",
+        "Popular business PNP programs include British Columbia Entrepreneur Immigration, Ontario Entrepreneur Stream, Saskatchewan Entrepreneur Program, and Alberta Investor Program. Each has unique eligibility criteria, investment requirements, business experience thresholds, and performance agreements."
+      ]
+    },
+    eligibility: {
+      title: "Business PNP General Requirements",
+      requirements: [
+        "Minimum net worth requirement (typically $300K - $1.5M CAD)",
+        "Business ownership or senior management experience (usually 3-5 years)",
+        "Investment commitment in eligible business activities",
+        "Language proficiency requirements (varies by province)",
+        "Educational qualifications (high school minimum, often higher)",
+        "Age preferences (typically 21-59 years old)",
+        "Intent to reside in nominating province",
+        "Business plan demonstrating economic benefit to province",
+        "Clean criminal record and medical clearance"
+      ]
+    },
+    process: {
+      title: "Business PNP Application Process",
+      steps: [
+        {
+          step: 1,
+          title: "Province Selection and Research",
+          description: "Research provincial business programs and select province aligning with business goals and personal preferences."
+        },
+        {
+          step: 2,
+          title: "Eligibility Assessment and Planning",
+          description: "Assess eligibility for chosen program and develop comprehensive business plan meeting provincial requirements."
+        },
+        {
+          step: 3,
+          title: "Submit PNP Application",
+          description: "File complete application with business plan, financial documentation, and required fees to provincial authorities."
+        },
+        {
+          step: 4,
+          title: "Interview and Due Diligence",
+          description: "Attend interview with provincial officials and undergo verification of business experience and financial capacity."
+        },
+        {
+          step: 5,
+          title: "Work Permit and Business Establishment",
+          description: "Receive temporary work permit to establish business and begin operations meeting performance agreement terms."
+        },
+        {
+          step: 6,
+          title: "Business Performance Monitoring",
+          description: "Operate business meeting agreed performance criteria while reporting progress to provincial authorities."
+        },
+        {
+          step: 7,
+          title: "Provincial Nomination and PR Application",
+          description: "Receive provincial nomination upon meeting performance criteria and apply for permanent residence federally."
+        }
+      ]
+    },
+    processingTime: "PNP application: 6-12 months; Work permit: 2-4 months; PR after nomination: 6-8 months",
+    fees: "PNP fees: $2,500-$15,000 CAD; Investment: $100K-$1M+ CAD; Professional fees vary by complexity",
+    faqs: [
+      {
+        question: "Which provinces have the best business PNP programs?",
+        answer: "Popular programs include BC Entrepreneur Immigration ($200K investment), Saskatchewan Entrepreneur ($200K), Prince Edward Island ($150K), and New Brunswick Entrepreneur ($250K). Best choice depends on business type, investment capacity, and personal preferences."
+      },
+      {
+        question: "Do I need to live in the province that nominates me?",
+        answer: "Yes, business PNP programs require intent to reside in the nominating province. Most have specific residency requirements and ongoing business operation obligations in that province."
+      },
+      {
+        question: "What happens if my business fails during PNP process?",
+        answer: "Business failure can jeopardize provincial nomination and permanent residence. Most provinces have performance agreements with specific criteria. Professional guidance helps structure businesses to meet requirements and minimize risks."
+      },
+      {
+        question: "Can I buy an existing business for PNP programs?",
+        answer: "Many PNP programs allow purchase of existing businesses, but there are often restrictions on business type, age, and seller relationships. Some programs prefer new business creation or significant expansion of existing businesses."
+      }
+    ]
+  }
+];
+
 export const practiceAreas = [
   {
     title: "Immigration Law",
@@ -2253,6 +2568,18 @@ export const visitNav = {
   subItems: visitPages.map(page => ({
     title: page.title,
     href: `/visit/${page.slug}`,
+    description: page.hero.description
+  }))
+};
+
+// Business navigation data
+export const businessNav = {
+  title: "Business",
+  href: "/business",
+  description: "Business immigration and commercial entry to Canada",
+  subItems: businessPages.map(page => ({
+    title: page.title,
+    href: `/business/${page.slug}`,
     description: page.hero.description
   }))
 };
