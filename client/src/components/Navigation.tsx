@@ -407,7 +407,7 @@ export default function Navigation() {
             <img 
               src="/logo.png" 
               alt="Our Law Services Logo" 
-              className="h-8 sm:h-10 lg:h-12 w-auto transition-all duration-300"
+              className="h-12 sm:h-14 lg:h-16 w-auto transition-all duration-300"
               data-testid="logo-image"
             />
           </Link>
