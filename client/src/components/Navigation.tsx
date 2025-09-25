@@ -372,6 +372,35 @@ export default function Navigation() {
       }`}
       data-testid="main-navigation"
     >
+      {/* Top Bar */}
+      <div className={`border-b border-border/30 ${isScrolled ? "bg-background/95" : "bg-background/80"} backdrop-blur-sm`}>
+        <div className="container mx-auto px-6 py-2">
+          <div className="hidden md:flex items-center justify-end space-x-4 lg:space-x-6">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`transition-colors hover:text-accent text-xs lg:text-sm whitespace-nowrap ${
+                  location === item.href ? "text-accent" : "text-foreground"
+                }`}
+                data-testid={`top-nav-link-${item.name.toLowerCase().replace(" ", "-")}`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Button 
+              asChild 
+              size="sm"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 text-xs lg:text-sm px-3 py-1.5 whitespace-nowrap"
+              data-testid="top-book-consultation-button"
+            >
+              <Link href="/contact">Book Consultation</Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+      
+      {/* Main Navigation */}
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center" data-testid="logo-link">
@@ -381,30 +410,11 @@ export default function Navigation() {
           </Link>
           
           <div className="hidden md:flex items-center space-x-2 lg:space-x-4 xl:space-x-6">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`transition-colors hover:text-accent text-sm lg:text-base whitespace-nowrap ${
-                  location === item.href ? "text-accent" : "text-foreground"
-                }`}
-                data-testid={`nav-link-${item.name.toLowerCase().replace(" ", "-")}`}
-              >
-                {item.name}
-              </Link>
-            ))}
             <WorkPermitsDropdown />
             <StudyDropdown />
             <VisitDropdown />
             <BusinessDropdown />
             <MegaMenu />
-            <Button 
-              asChild 
-              className="bg-accent text-accent-foreground hover:bg-accent/90 text-sm lg:text-base px-3 lg:px-4 py-2 whitespace-nowrap"
-              data-testid="book-consultation-button"
-            >
-              <Link href="/contact">Book Consultation</Link>
-            </Button>
           </div>
           
           <Button
@@ -422,35 +432,40 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border dark:border-border">
             <div className="flex flex-col space-y-0 pt-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`transition-colors hover:text-accent p-4 block ${
-                    location === item.href ? "text-accent" : "text-foreground"
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  data-testid={`mobile-nav-link-${item.name.toLowerCase().replace(" ", "-")}`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {/* Top Bar Items in Mobile Menu */}
+              <div className="border-b border-border/20 mb-2 pb-2">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`transition-colors hover:text-accent p-4 block ${
+                      location === item.href ? "text-accent" : "text-foreground"
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    data-testid={`mobile-top-nav-link-${item.name.toLowerCase().replace(" ", "-")}`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <div className="p-4">
+                  <Button 
+                    asChild 
+                    className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
+                    data-testid="mobile-book-consultation-button"
+                  >
+                    <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                      Book Consultation
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Practice Areas Dropdowns */}
               <WorkPermitsDropdown isMobile={true} />
               <StudyDropdown isMobile={true} />
               <VisitDropdown isMobile={true} />
               <BusinessDropdown isMobile={true} />
               <MobilePracticeAreasMenu onClose={() => setIsMobileMenuOpen(false)} />
-              <div className="p-4">
-                <Button 
-                  asChild 
-                  className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
-                  data-testid="mobile-book-consultation-button"
-                >
-                  <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                    Book Consultation
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         )}
