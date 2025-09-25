@@ -405,7 +405,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center" data-testid="logo-link">
             <img 
-              src="/attached_assets/Gemini_Generated_Image_mnonozmnonozmnon_1758794935486.png" 
+              src="/logo.png" 
               alt="Our Law Services Logo" 
               className="h-8 sm:h-10 lg:h-12 w-auto transition-all duration-300"
               data-testid="logo-image"
