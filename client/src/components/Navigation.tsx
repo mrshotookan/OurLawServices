@@ -368,7 +368,7 @@ export default function Navigation() {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "nav-sticky shadow-lg" : "bg-transparent"
+        isScrolled ? "nav-sticky shadow-lg" : "bg-background/95 backdrop-blur-sm"
       }`}
       data-testid="main-navigation"
     >
@@ -404,9 +404,12 @@ export default function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center" data-testid="logo-link">
-            <h1 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-primary transition-all duration-300">
-              OurLawServices
-            </h1>
+            <img 
+              src="/attached_assets/Gemini_Generated_Image_mnonozmnonozmnon_1758794935486.png" 
+              alt="Our Law Services Logo" 
+              className="h-8 sm:h-10 lg:h-12 w-auto transition-all duration-300"
+              data-testid="logo-image"
+            />
           </Link>
           
           <div className="hidden md:flex items-center space-x-2 lg:space-x-4 xl:space-x-6">
