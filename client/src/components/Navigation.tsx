@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Briefcase, GraduationCap, Plane, Building, Scale } from "lucide-react";
@@ -28,6 +28,24 @@ export default function Navigation() {
   const [visitOpen, setVisitOpen] = useState(false);
   const [businessOpen, setBusinessOpen] = useState(false);
   const [practiceAreasOpen, setPracticeAreasOpen] = useState(false);
+  
+  // Timeout refs for delayed closing
+  const workPermitsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const studyTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const visitTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const businessTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const practiceAreasTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  
+  // Cleanup timeouts on unmount
+  useEffect(() => {
+    return () => {
+      if (workPermitsTimeoutRef.current) clearTimeout(workPermitsTimeoutRef.current);
+      if (studyTimeoutRef.current) clearTimeout(studyTimeoutRef.current);
+      if (visitTimeoutRef.current) clearTimeout(visitTimeoutRef.current);
+      if (businessTimeoutRef.current) clearTimeout(businessTimeoutRef.current);
+      if (practiceAreasTimeoutRef.current) clearTimeout(practiceAreasTimeoutRef.current);
+    };
+  }, []);
   const [workPermitsMobileOpen, setWorkPermitsMobileOpen] = useState(false);
   const [studyMobileOpen, setStudyMobileOpen] = useState(false);
   const [visitMobileOpen, setVisitMobileOpen] = useState(false);
@@ -78,11 +96,26 @@ export default function Navigation() {
       );
     }
 
+    const handleMouseEnter = () => {
+      if (workPermitsTimeoutRef.current) {
+        clearTimeout(workPermitsTimeoutRef.current);
+        workPermitsTimeoutRef.current = null;
+      }
+      setIsOpen(true);
+    };
+    
+    const handleMouseLeave = () => {
+      const timeout = setTimeout(() => {
+        setIsOpen(false);
+      }, 150); // 150ms delay before closing
+      workPermitsTimeoutRef.current = timeout;
+    };
+
     return (
       <div 
         className="relative"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         data-testid="work-permits-dropdown"
       >
         <Link
@@ -94,8 +127,10 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
-               data-testid="work-permits-dropdown-menu">
+          <div className="absolute top-full left-0 mt-1 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
+               data-testid="work-permits-dropdown-menu"
+               onMouseEnter={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}>
             <ul className="p-4 space-y-1">
               {workPermitsNav.subItems.map((item) => (
                 <li key={item.href}>
@@ -161,11 +196,26 @@ export default function Navigation() {
       );
     }
 
+    const handleMouseEnter = () => {
+      if (studyTimeoutRef.current) {
+        clearTimeout(studyTimeoutRef.current);
+        studyTimeoutRef.current = null;
+      }
+      setIsOpen(true);
+    };
+    
+    const handleMouseLeave = () => {
+      const timeout = setTimeout(() => {
+        setIsOpen(false);
+      }, 150);
+      studyTimeoutRef.current = timeout;
+    };
+
     return (
       <div 
         className="relative"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         data-testid="study-dropdown"
       >
         <Link
@@ -177,8 +227,10 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
-               data-testid="study-dropdown-menu">
+          <div className="absolute top-full left-0 mt-1 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
+               data-testid="study-dropdown-menu"
+               onMouseEnter={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}>
             <ul className="p-4 space-y-1">
               {studyNav.subItems.map((item) => (
                 <li key={item.href}>
@@ -244,11 +296,26 @@ export default function Navigation() {
       );
     }
 
+    const handleMouseEnter = () => {
+      if (visitTimeoutRef.current) {
+        clearTimeout(visitTimeoutRef.current);
+        visitTimeoutRef.current = null;
+      }
+      setIsOpen(true);
+    };
+    
+    const handleMouseLeave = () => {
+      const timeout = setTimeout(() => {
+        setIsOpen(false);
+      }, 150);
+      visitTimeoutRef.current = timeout;
+    };
+
     return (
       <div 
         className="relative"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         data-testid="visit-dropdown"
       >
         <Link
@@ -260,8 +327,10 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
-               data-testid="visit-dropdown-menu">
+          <div className="absolute top-full left-0 mt-1 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
+               data-testid="visit-dropdown-menu"
+               onMouseEnter={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}>
             <ul className="p-4 space-y-1">
               {visitNav.subItems.map((item) => (
                 <li key={item.href}>
@@ -327,11 +396,26 @@ export default function Navigation() {
       );
     }
 
+    const handleMouseEnter = () => {
+      if (businessTimeoutRef.current) {
+        clearTimeout(businessTimeoutRef.current);
+        businessTimeoutRef.current = null;
+      }
+      setIsOpen(true);
+    };
+    
+    const handleMouseLeave = () => {
+      const timeout = setTimeout(() => {
+        setIsOpen(false);
+      }, 150);
+      businessTimeoutRef.current = timeout;
+    };
+
     return (
       <div 
         className="relative"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         data-testid="business-dropdown"
       >
         <Link
@@ -343,8 +427,10 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
-               data-testid="business-dropdown-menu">
+          <div className="absolute top-full left-0 mt-1 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
+               data-testid="business-dropdown-menu"
+               onMouseEnter={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}>
             <ul className="p-4 space-y-1">
               {businessNav.subItems.map((item) => (
                 <li key={item.href}>
@@ -410,11 +496,26 @@ export default function Navigation() {
       );
     }
 
+    const handleMouseEnter = () => {
+      if (practiceAreasTimeoutRef.current) {
+        clearTimeout(practiceAreasTimeoutRef.current);
+        practiceAreasTimeoutRef.current = null;
+      }
+      setIsOpen(true);
+    };
+    
+    const handleMouseLeave = () => {
+      const timeout = setTimeout(() => {
+        setIsOpen(false);
+      }, 150);
+      practiceAreasTimeoutRef.current = timeout;
+    };
+
     return (
       <div 
         className="relative"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         data-testid="practice-areas-dropdown"
       >
         <button
@@ -425,8 +526,10 @@ export default function Navigation() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </button>
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
-               data-testid="practice-areas-dropdown-menu">
+          <div className="absolute top-full left-0 mt-1 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
+               data-testid="practice-areas-dropdown-menu"
+               onMouseEnter={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}>
             <ul className="p-4 space-y-1">
               {practiceAreas.map((item) => (
                 <li key={item.href}>
