@@ -281,7 +281,7 @@ export default function BusinessPage() {
                 Ready to Start Your Business Immigration Journey?
               </h2>
               <p className="text-xl mb-8 text-primary-foreground/90" data-testid="cta-description">
-                Get expert legal guidance for your business immigration application. Our experienced lawyers specialize in business visas, investor programs, and entrepreneurial pathways to Canada.
+                Get professional legal guidance for your business immigration application. Our experienced lawyers specialize in business visas, investor programs, and entrepreneurial pathways to Canada.
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">

@@ -69,7 +69,7 @@ export default function PracticeAreas() {
     <>
       <SEOHead
         title="Practice Areas - Comprehensive Legal Services"
-        description="Explore our comprehensive legal services across Immigration Law, Real Estate Law, Wills & Power of Attorney, and Criminal Law. Expert representation in Toronto and surrounding areas."
+        description="Explore our comprehensive legal services across Immigration Law, Real Estate Law, Wills & Power of Attorney, and Criminal Law. Professional representation in Toronto and surrounding areas."
         keywords="practice areas, legal services, immigration lawyer, real estate lawyer, criminal defense, estate planning, Toronto legal services"
         canonicalUrl={`${window.location.origin}/practice-areas`}
       />
@@ -88,7 +88,7 @@ export default function PracticeAreas() {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               We provide comprehensive legal services across multiple practice areas, 
-              combining deep expertise with personalized attention to achieve the best 
+              combining deep professional knowledge with personalized attention to achieve the best 
               possible outcomes for our clients.
             </p>
           </motion.div>
@@ -186,7 +186,7 @@ export default function PracticeAreas() {
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Our multi-disciplinary approach means you get comprehensive legal support 
               under one roof. Whether you need help with one area or multiple practice 
-              areas, our team has the expertise to handle your legal needs efficiently 
+              areas, our team has the professional expertise to handle your legal needs efficiently 
               and effectively.
             </p>
 

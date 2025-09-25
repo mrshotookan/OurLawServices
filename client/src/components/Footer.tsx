@@ -12,7 +12,7 @@ export default function Footer() {
               OurLawServices
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Providing expert legal representation and comprehensive legal services 
+              Providing professional legal representation and comprehensive legal services 
               to individuals and businesses across Canada.
             </p>
             <div className="flex space-x-4">

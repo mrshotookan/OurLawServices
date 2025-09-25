@@ -71,7 +71,7 @@ export default function WorkPermitPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button size="lg" className="bg-accent dark:bg-accent hover:bg-accent/90 dark:hover:bg-accent/90 text-white dark:text-white" asChild data-testid="cta-consultation">
-                <Link href="/contact">Get Expert Help Today</Link>
+                <Link href="/contact">Get Professional Help Today</Link>
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-primary dark:border-primary text-primary dark:text-primary hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white" asChild data-testid="cta-phone">
                 <a href="tel:+15555555555">Call Now: (555) LAW-FIRM</a>

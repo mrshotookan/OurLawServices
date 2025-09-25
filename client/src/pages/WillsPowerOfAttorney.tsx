@@ -34,7 +34,7 @@ export default function WillsPowerOfAttorney() {
     },
     {
       title: "Probate Services",
-      description: "Expert guidance through the probate process to validate wills and distribute estates.",
+      description: "Professional guidance through the probate process to validate wills and distribute estates.",
       features: ["Probate Applications", "Estate Valuations", "Creditor Claims", "Court Representations"]
     }
   ];
@@ -42,8 +42,8 @@ export default function WillsPowerOfAttorney() {
   const whyChooseUs = [
     {
       icon: <FileText className="h-6 w-6" />,
-      title: "Estate Law Experts",
-      description: "Specialized expertise in wills, estates, and succession planning."
+      title: "Estate Law Professionals",
+      description: "Specialized professional expertise in wills, estates, and succession planning."
     },
     {
       icon: <Shield className="h-6 w-6" />,
@@ -66,7 +66,7 @@ export default function WillsPowerOfAttorney() {
     <>
       <SEOHead
         title="Wills & Power of Attorney Services - Estate Planning Lawyers in Toronto"
-        description="Expert estate planning services in Toronto. Will drafting, power of attorney documents, estate administration, and probate services. Protect your family's future."
+        description="Professional estate planning services in Toronto. Will drafting, power of attorney documents, estate administration, and probate services. Protect your family's future."
         keywords="wills lawyer Toronto, power of attorney, estate planning, probate services, trust administration, estate lawyer"
         canonicalUrl={`${window.location.origin}/wills-power-of-attorney`}
       />
@@ -196,7 +196,7 @@ export default function WillsPowerOfAttorney() {
               Why Choose Our Estate Planning Services?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our estate planning team combines legal expertise with compassionate 
+              Our estate planning team combines professional legal expertise with compassionate 
               guidance to help you make informed decisions about your family's future.
             </p>
           </motion.div>

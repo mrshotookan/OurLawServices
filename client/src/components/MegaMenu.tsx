@@ -89,7 +89,7 @@ export default function MegaMenu({ onClose }: MegaMenuProps) {
                   Need Legal Consultation?
                 </h4>
                 <p className="text-sm text-muted-foreground">
-                  Get expert legal advice tailored to your specific situation.
+                  Get professional legal advice tailored to your specific situation.
                 </p>
               </div>
               <Link

@@ -19,7 +19,7 @@ export default function CriminalLaw() {
     },
     {
       title: "Bail Hearings & Applications",
-      description: "Expert representation at bail hearings to secure your release from custody.",
+      description: "Professional representation at bail hearings to secure your release from custody.",
       features: ["Bail Applications", "Surety Arrangements", "Release Conditions", "Variation Applications"]
     },
     {
@@ -66,7 +66,7 @@ export default function CriminalLaw() {
     <>
       <SEOHead
         title="Criminal Law Services - Criminal Defense Lawyers in Toronto"
-        description="Expert criminal defense representation in Toronto. DUI defense, bail hearings, trial representation, and appeals. Protecting your rights and freedom."
+        description="Professional criminal defense representation in Toronto. DUI defense, bail hearings, trial representation, and appeals. Protecting your rights and freedom."
         keywords="criminal lawyer Toronto, DUI defense, criminal defense, bail hearings, trial representation, criminal appeals"
         canonicalUrl={`${window.location.origin}/criminal-law`}
       />

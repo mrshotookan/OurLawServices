@@ -28,7 +28,7 @@ export default function About() {
       specialization: "Criminal Defense & Family Law",
       experience: "12+ years",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
-      bio: "Emily brings compassionate expertise to criminal defense and family law matters, with a focus on protecting client rights."
+      bio: "Emily brings compassionate professional expertise to criminal defense and family law matters, with a focus on protecting client rights."
     }
   ];
 
@@ -46,7 +46,7 @@ export default function About() {
     {
       icon: <Award className="h-8 w-8" />,
       title: "Excellence",
-      description: "We strive for outstanding results in every case, combining legal expertise with strategic thinking."
+      description: "We strive for outstanding results in every case, combining professional legal expertise with strategic thinking."
     },
     {
       icon: <Users className="h-8 w-8" />,
@@ -58,9 +58,9 @@ export default function About() {
   return (
     <>
       <SEOHead
-        title="About Us - Meet Our Expert Legal Team"
+        title="About Us - Meet Our Professional Legal Team"
         description="Learn about OurLawServices' experienced legal team, our mission, values, and commitment to providing exceptional legal representation across multiple practice areas."
-        keywords="about us, legal team, law firm Toronto, experienced lawyers, legal expertise"
+        keywords="about us, legal team, law firm Toronto, experienced lawyers, legal professionals"
         canonicalUrl={`${window.location.origin}/about`}
       />
 
@@ -79,7 +79,7 @@ export default function About() {
             <p className="text-xl text-muted-foreground leading-relaxed">
               Founded on the principles of integrity, excellence, and client service, 
               OurLawServices has been providing trusted legal representation for over 
-              two decades. Our team combines deep legal expertise with a commitment 
+              two decades. Our team combines deep professional legal knowledge with a commitment 
               to achieving the best possible outcomes for our clients.
             </p>
           </motion.div>
@@ -107,7 +107,7 @@ export default function About() {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Our approach combines traditional legal excellence with modern client 
-                service standards, ensuring that you receive both expert representation 
+                service standards, ensuring that you receive both professional representation 
                 and the personal attention you deserve.
               </p>
             </motion.div>
@@ -184,10 +184,10 @@ export default function About() {
             className="text-center mb-16"
           >
             <h3 className="text-4xl font-serif font-bold text-primary mb-6" data-testid="team-title">
-              Meet Our Expert Team
+              Meet Our Professional Team
             </h3>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our experienced attorneys bring decades of combined expertise across 
+              Our experienced attorneys bring decades of combined professional expertise across 
               multiple practice areas, ensuring comprehensive legal representation.
             </p>
           </motion.div>

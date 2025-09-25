@@ -147,7 +147,7 @@ export default function Contact() {
     <>
       <SEOHead
         title="Contact Us - Schedule Your Free Legal Consultation"
-        description="Contact OurLawServices for expert legal representation. Schedule a free consultation, get directions to our Toronto office, or reach us by phone for immediate assistance."
+        description="Contact OurLawServices for professional legal representation. Schedule a free consultation, get directions to our Toronto office, or reach us by phone for immediate assistance."
         keywords="contact law firm Toronto, legal consultation, law office Toronto, immigration lawyer contact, real estate lawyer Toronto"
         canonicalUrl={`${window.location.origin}/contact`}
       />

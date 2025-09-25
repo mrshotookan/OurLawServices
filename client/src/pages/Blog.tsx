@@ -131,8 +131,8 @@ export default function Blog() {
   return (
     <>
       <SEOHead
-        title="Legal Blog & Insights - Expert Legal Advice and Updates"
-        description="Stay informed with expert legal insights, updates on Canadian law changes, and practical advice from our experienced legal team. Immigration, real estate, criminal law, and estate planning."
+        title="Legal Blog & Insights - Professional Legal Advice and Updates"
+        description="Stay informed with professional legal insights, updates on Canadian law changes, and practical advice from our experienced legal team. Immigration, real estate, criminal law, and estate planning."
         keywords="legal blog, law insights, Canadian law updates, legal advice, immigration news, real estate law, criminal defense, estate planning"
         canonicalUrl={`${window.location.origin}/blog`}
       />
@@ -150,7 +150,7 @@ export default function Blog() {
               Legal Insights & Updates
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Stay informed with expert legal advice, law updates, and practical insights 
+              Stay informed with professional legal advice, law updates, and practical insights 
               from our experienced legal team. Knowledge is your best legal defense.
             </p>
             
@@ -318,7 +318,7 @@ export default function Blog() {
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Subscribe to our newsletter for the latest legal updates, case studies, 
-              and expert advice delivered directly to your inbox.
+              and professional advice delivered directly to your inbox.
             </p>
             <div className="max-w-md mx-auto flex gap-4">
               <Input

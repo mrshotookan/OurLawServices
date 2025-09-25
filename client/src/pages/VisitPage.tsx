@@ -281,7 +281,7 @@ export default function VisitPage() {
                 Ready to Start Your Canadian Visit Application?
               </h2>
               <p className="text-xl mb-8 text-primary-foreground/90" data-testid="cta-description">
-                Get expert legal guidance for your visitor visa application. Our experienced immigration lawyers are here to help you navigate the process successfully.
+                Get professional legal guidance for your visitor visa application. Our experienced immigration lawyers are here to help you navigate the process successfully.
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">

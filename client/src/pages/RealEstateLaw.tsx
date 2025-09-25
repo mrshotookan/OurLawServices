@@ -29,7 +29,7 @@ export default function RealEstateLaw() {
     },
     {
       title: "Contract Review & Negotiation",
-      description: "Expert review and negotiation of purchase agreements and real estate contracts.",
+      description: "Professional review and negotiation of purchase agreements and real estate contracts.",
       features: ["Contract Analysis", "Terms Negotiation", "Condition Removal", "Amendment Drafting"]
     },
     {
@@ -66,7 +66,7 @@ export default function RealEstateLaw() {
     <>
       <SEOHead
         title="Real Estate Law Services - Property Transaction Lawyers in Toronto"
-        description="Expert real estate law services in Toronto. Residential and commercial property transactions, closings, title searches, and contract negotiations. Trusted property lawyers."
+        description="Professional real estate law services in Toronto. Residential and commercial property transactions, closings, title searches, and contract negotiations. Trusted property lawyers."
         keywords="real estate lawyer Toronto, property transactions, real estate closings, title searches, commercial real estate, residential property law"
         canonicalUrl={`${window.location.origin}/real-estate-law`}
       />
@@ -85,7 +85,7 @@ export default function RealEstateLaw() {
                 <span className="text-accent font-medium">Real Estate Law</span>
               </div>
               <h1 className="text-5xl font-serif font-bold mb-6" data-testid="real-estate-headline">
-                Your Property Transaction Experts
+                Your Property Transaction Professionals
               </h1>
               <p className="text-xl text-primary-foreground/80 mb-8 leading-relaxed">
                 Whether you're buying your first home or closing a commercial deal, 
@@ -269,7 +269,7 @@ export default function RealEstateLaw() {
               Why Choose Our Real Estate Services?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our real estate law team combines legal expertise with deep market 
+              Our real estate law team combines professional legal expertise with deep market 
               knowledge to protect your interests in every transaction.
             </p>
           </motion.div>
@@ -337,7 +337,7 @@ export default function RealEstateLaw() {
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Let our experienced real estate lawyers guide you through a smooth, 
-              successful property transaction. Contact us today for expert legal support.
+              successful property transaction. Contact us today for professional legal support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 

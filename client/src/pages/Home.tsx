@@ -86,8 +86,8 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="Professional Legal Services - Expert Representation You Can Trust"
-        description="Expert legal representation across Immigration Law, Real Estate Law, Wills & Power of Attorney, and Criminal Law. 20+ years experience, 98% success rate. Free consultation available."
+        title="Professional Legal Services - Professional Representation You Can Trust"
+        description="Professional legal representation across Immigration Law, Real Estate Law, Wills & Power of Attorney, and Criminal Law. 20+ years experience, 98% success rate. Free consultation available."
         keywords="law firm, legal services, immigration lawyer, real estate lawyer, criminal defense, wills and estates, Toronto lawyer"
         canonicalUrl={`${window.location.origin}/`}
       />
@@ -103,7 +103,7 @@ export default function Home() {
               className="animate-fade-in"
             >
               <h1 className="text-5xl lg:text-6xl font-serif font-bold text-primary mb-6 leading-tight" data-testid="hero-headline">
-                Expert Legal 
+                Professional Legal 
                 <span className="text-accent"> Representation</span> 
                 You Can Trust
               </h1>
@@ -182,7 +182,7 @@ export default function Home() {
               Why Choose OurLawServices?
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-12" data-testid="intro-description">
-              We combine decades of legal expertise with a client-first approach, ensuring 
+              We combine decades of professional legal expertise with a client-first approach, ensuring 
               personalized attention and strategic solutions for your legal challenges. Our 
               commitment to excellence and proven track record make us the trusted choice 
               for individuals and businesses alike.
@@ -218,7 +218,7 @@ export default function Home() {
                   <Users className="h-8 w-8 text-accent-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary mb-2" data-testid="feature-title-team">
-                  Expert Team
+                  Professional Team
                 </h3>
                 <p className="text-muted-foreground">
                   Experienced lawyers specializing in diverse practice areas
@@ -359,7 +359,7 @@ export default function Home() {
               </h3>
               <p className="text-muted-foreground dark:text-muted-foreground mb-6">
                 Our extensive network of legal professionals allows us to connect you with 
-                specialized experts across all areas of law. Contact us for a consultation.
+                specialized professionals across all areas of law. Contact us for a consultation.
               </p>
               <Button 
                 asChild 

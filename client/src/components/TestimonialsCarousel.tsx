@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Michael Chen",
     position: "Software Engineer",
-    content: "The team at OurLawServices made our immigration process seamless. Their expertise and dedication helped us secure our permanent residency much faster than we expected. Highly recommend their services!",
+    content: "The team at OurLawServices made our immigration process seamless. Their professional expertise and dedication helped us secure our permanent residency much faster than we expected. Highly recommend their services!",
     rating: 5,
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
   },
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     id: 3,
     name: "David Rodriguez",
     position: "Marketing Director",
-    content: "During a difficult time, their criminal law expertise provided us with the strong defense we needed. Professional, compassionate, and results-oriented. Thank you for everything.",
+    content: "During a difficult time, their professional criminal law knowledge provided us with the strong defense we needed. Professional, compassionate, and results-oriented. Thank you for everything.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
   }

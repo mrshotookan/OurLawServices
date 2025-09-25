@@ -14,7 +14,7 @@ export default function ImmigrationLaw() {
     },
     {
       title: "Permanent Residency",
-      description: "Expert guidance through all permanent residency programs and pathways.",
+      description: "Professional guidance through all permanent residency programs and pathways.",
       features: ["Express Entry System", "Provincial Nominee Programs", "Family Class Sponsorship", "Start-up Visa Program"]
     },
     {
@@ -43,7 +43,7 @@ export default function ImmigrationLaw() {
     {
       icon: <Scale className="h-6 w-6" />,
       title: "Immigration Law Specialists",
-      description: "Our team focuses exclusively on immigration law with deep expertise in all programs."
+      description: "Our team focuses exclusively on immigration law with deep professional knowledge in all programs."
     },
     {
       icon: <CheckCircle className="h-6 w-6" />,
@@ -65,8 +65,8 @@ export default function ImmigrationLaw() {
   return (
     <>
       <SEOHead
-        title="Immigration Law Services - Expert Immigration Lawyers in Toronto"
-        description="Expert immigration law services in Toronto. Visa applications, permanent residency, work permits, refugee claims, and citizenship applications. Free consultation available."
+        title="Immigration Law Services - Professional Immigration Lawyers in Toronto"
+        description="Professional immigration law services in Toronto. Visa applications, permanent residency, work permits, refugee claims, and citizenship applications. Free consultation available."
         keywords="immigration lawyer Toronto, visa applications, permanent residency Canada, work permits, refugee claims, citizenship applications"
         canonicalUrl={`${window.location.origin}/immigration-law`}
       />
@@ -144,7 +144,7 @@ export default function ImmigrationLaw() {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From temporary visas to permanent residency and citizenship, we provide 
-              expert legal guidance throughout your entire immigration journey.
+              professional legal guidance throughout your entire immigration journey.
             </p>
           </motion.div>
 
