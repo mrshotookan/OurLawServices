@@ -20,6 +20,7 @@ export default function Footer() {
                 href="#" 
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground hover:bg-accent transition-colors"
                 data-testid="social-facebook"
+                aria-label="Follow us on Facebook"
               >
                 <Facebook size={16} />
               </a>
@@ -27,6 +28,7 @@ export default function Footer() {
                 href="#" 
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground hover:bg-accent transition-colors"
                 data-testid="social-twitter"
+                aria-label="Follow us on Twitter"
               >
                 <Twitter size={16} />
               </a>
@@ -34,6 +36,7 @@ export default function Footer() {
                 href="#" 
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground hover:bg-accent transition-colors"
                 data-testid="social-linkedin"
+                aria-label="Connect with us on LinkedIn"
               >
                 <Linkedin size={16} />
               </a>
@@ -175,6 +178,7 @@ export default function Footer() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               data-testid="google-maps-embed"
+              title="Our Law Services Office Location Map"
             />
           </div>
         </div>
@@ -183,8 +187,8 @@ export default function Footer() {
         <div className="border-t border-border pt-8 text-center">
           <p className="text-muted-foreground" data-testid="copyright">
             © 2024 OurLawServices. All rights reserved. | 
-            <a href="#" className="hover:text-accent transition-colors ml-1 mr-1">Privacy Policy</a> | 
-            <a href="#" className="hover:text-accent transition-colors ml-1">Terms of Service</a>
+            <a href="#" className="hover:text-accent transition-colors ml-1 mr-1" aria-label="View our Privacy Policy">Privacy Policy</a> | 
+            <a href="#" className="hover:text-accent transition-colors ml-1" aria-label="View our Terms of Service">Terms of Service</a>
           </p>
         </div>
       </div>

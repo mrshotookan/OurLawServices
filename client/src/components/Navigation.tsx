@@ -509,6 +509,7 @@ export default function Navigation() {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="mobile-menu-button"
+            aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>

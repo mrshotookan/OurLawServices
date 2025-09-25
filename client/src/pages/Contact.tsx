@@ -641,6 +641,7 @@ export default function Contact() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               data-testid="google-maps-iframe"
+              title="Our Law Services Office Location Map"
             />
           </div>
         </div>
