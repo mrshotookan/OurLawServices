@@ -555,6 +555,106 @@ export default function Navigation() {
     );
   };
 
+  const InadmissibleDropdown = ({ isMobile = false }) => {
+    const isOpen = isMobile ? inadmissibleMobileOpen : inadmissibleOpen;
+    const setIsOpen = isMobile ? setInadmissibleMobileOpen : setInadmissibleOpen;
+
+    const handleLinkClick = () => {
+      setIsOpen(false);
+      if (isMobile) setIsMobileMenuOpen(false);
+    };
+
+    if (isMobile) {
+      return (
+        <div className="border-b border-border/30 last:border-b-0">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center justify-between w-full p-4 text-left hover:bg-secondary/50 transition-colors"
+            data-testid="mobile-inadmissible-trigger"
+          >
+            <div className="flex items-center space-x-3">
+              <AlertTriangle className="w-5 h-5 text-primary" />
+              <span className="font-medium text-foreground">Inadmissible to Canada</span>
+            </div>
+            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {isOpen && (
+            <ul className="bg-accent mx-2 mb-2 rounded-lg border border-border/20">
+              {inadmissibleNav.subItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-accent-foreground/10 hover:bg-accent-foreground/20 text-accent-foreground hover:text-accent-foreground border border-accent-foreground/30 hover:border-accent-foreground/60 rounded-md transition-all duration-200"
+                    onClick={handleLinkClick}
+                    data-testid={`mobile-inadmissible-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    <span className="w-1.5 h-1.5 bg-accent-foreground/80 rounded-full mr-3"></span>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    }
+
+    const handleMouseEnter = () => {
+      if (inadmissibleTimeoutRef.current) {
+        clearTimeout(inadmissibleTimeoutRef.current);
+        inadmissibleTimeoutRef.current = null;
+      }
+      setIsOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+      const timeout = setTimeout(() => {
+        setIsOpen(false);
+      }, 150);
+      inadmissibleTimeoutRef.current = timeout;
+    };
+
+    return (
+      <div
+        className="relative"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        data-testid="inadmissible-dropdown"
+      >
+        <Link
+          href={inadmissibleNav.href}
+          className="flex items-center space-x-1 px-2 lg:px-3 py-2 text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap"
+          data-testid="inadmissible-link"
+        >
+          <span>Inadmissible to Canada</span>
+          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        </Link>
+        {isOpen && (
+          <div className="absolute top-full left-0 mt-1 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
+               data-testid="inadmissible-dropdown-menu"
+               onMouseEnter={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}>
+            <ul className="p-4 space-y-1">
+              {inadmissibleNav.subItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center px-3 py-2 text-sm bg-accent-foreground/10 hover:bg-accent-foreground/20 text-accent-foreground hover:text-accent-foreground border border-accent-foreground/30 hover:border-accent-foreground/60 rounded-md transition-all duration-200 hover:shadow-sm leading-tight"
+                    onClick={handleLinkClick}
+                    data-testid={`inadmissible-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    <span className="w-1.5 h-1.5 bg-accent-foreground/80 rounded-full mr-2"></span>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -669,103 +769,3 @@ export default function Navigation() {
     </nav>
   );
 }
-
-const InadmissibleDropdown = ({ isMobile = false }) => {
-    const isOpen = isMobile ? inadmissibleMobileOpen : inadmissibleOpen;
-    const setIsOpen = isMobile ? setInadmissibleMobileOpen : setInadmissibleOpen;
-
-    const handleLinkClick = () => {
-      setIsOpen(false);
-      if (isMobile) setIsMobileMenuOpen(false);
-    };
-
-    if (isMobile) {
-      return (
-        <div className="border-b border-border/30 last:border-b-0">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center justify-between w-full p-4 text-left hover:bg-secondary/50 transition-colors"
-            data-testid="mobile-inadmissible-trigger"
-          >
-            <div className="flex items-center space-x-3">
-              <AlertTriangle className="w-5 h-5 text-primary" />
-              <span className="font-medium text-foreground">Inadmissible to Canada</span>
-            </div>
-            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {isOpen && (
-            <ul className="bg-accent mx-2 mb-2 rounded-lg border border-border/20">
-              {inadmissibleNav.subItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center px-4 py-3 mx-2 my-1 text-sm bg-accent-foreground/10 hover:bg-accent-foreground/20 text-accent-foreground hover:text-accent-foreground border border-accent-foreground/30 hover:border-accent-foreground/60 rounded-md transition-all duration-200"
-                    onClick={handleLinkClick}
-                    data-testid={`mobile-inadmissible-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    <span className="w-1.5 h-1.5 bg-accent-foreground/80 rounded-full mr-3"></span>
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      );
-    }
-
-    const handleMouseEnter = () => {
-      if (inadmissibleTimeoutRef.current) {
-        clearTimeout(inadmissibleTimeoutRef.current);
-        inadmissibleTimeoutRef.current = null;
-      }
-      setIsOpen(true);
-    };
-
-    const handleMouseLeave = () => {
-      const timeout = setTimeout(() => {
-        setIsOpen(false);
-      }, 150);
-      inadmissibleTimeoutRef.current = timeout;
-    };
-
-    return (
-      <div
-        className="relative"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        data-testid="inadmissible-dropdown"
-      >
-        <Link
-          href={inadmissibleNav.href}
-          className="flex items-center space-x-1 px-2 lg:px-3 py-2 text-sm lg:text-base text-foreground hover:text-primary transition-colors whitespace-nowrap"
-          data-testid="inadmissible-link"
-        >
-          <span>Inadmissible to Canada</span>
-          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
-        </Link>
-        {isOpen && (
-          <div className="absolute top-full left-0 mt-1 w-80 z-50 bg-accent backdrop-blur-sm border border-border rounded-lg shadow-xl"
-               data-testid="inadmissible-dropdown-menu"
-               onMouseEnter={handleMouseEnter}
-               onMouseLeave={handleMouseLeave}>
-            <ul className="p-4 space-y-1">
-              {inadmissibleNav.subItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center px-3 py-2 text-sm bg-accent-foreground/10 hover:bg-accent-foreground/20 text-accent-foreground hover:text-accent-foreground border border-accent-foreground/30 hover:border-accent-foreground/60 rounded-md transition-all duration-200 hover:shadow-sm leading-tight"
-                    onClick={handleLinkClick}
-                    data-testid={`inadmissible-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    <span className="w-1.5 h-1.5 bg-accent-foreground/80 rounded-full mr-2"></span>
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
-    );
-  };
