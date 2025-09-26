@@ -20,6 +20,12 @@ import WorkPermitPage from "@/pages/WorkPermitPage";
 import StudyPage from "@/pages/StudyPage";
 import VisitPage from "@/pages/VisitPage";
 import BusinessPage from "@/pages/BusinessPage";
+import CriminalInadmissibility from "@/pages/CriminalInadmissibility";
+import MedicalInadmissibility from "@/pages/MedicalInadmissibility";
+import ProceduralFairnessLetters from "@/pages/ProceduralFairnessLetters";
+import MisrepresentationInCanadianImmigration from "@/pages/MisrepresentationInCanadianImmigration";
+import TemporaryResidentPermits from "@/pages/TemporaryResidentPermits";
+import AuthorizationToReturnToCanada from "@/pages/AuthorizationToReturnToCanada";
 import Layout from "@/components/Layout";
 
 function Router() {
@@ -46,6 +52,12 @@ function Router() {
         <Route path="/study/:slug" component={StudyPage} />
         <Route path="/visit/:slug" component={VisitPage} />
         <Route path="/business/:slug" component={BusinessPage} />
+        <Route path="/inadmissible/criminal-inadmissibility" component={CriminalInadmissibility} />
+        <Route path="/inadmissible/medical-inadmissibility" component={MedicalInadmissibility} />
+        <Route path="/inadmissible/procedural-fairness-letters" component={ProceduralFairnessLetters} />
+        <Route path="/inadmissible/misrepresentation-in-canadian-immigration" component={MisrepresentationInCanadianImmigration} />
+        <Route path="/inadmissible/temporary-resident-permits" component={TemporaryResidentPermits} />
+        <Route path="/inadmissible/authorization-to-return-to-canada" component={AuthorizationToReturnToCanada} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

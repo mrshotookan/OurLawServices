@@ -2531,6 +2531,45 @@ export const workPermitsNav = {
   }))
 };
 
+// Inadmissible to Canada navigation data
+export const inadmissibleNav = {
+  title: "Inadmissible to Canada",
+  href: "/inadmissible",
+  description: "Information about inadmissibility to Canada",
+  subItems: [
+    {
+      title: "Criminal Inadmissibility",
+      href: "/inadmissible/criminal-inadmissibility",
+      description: "Information on criminal inadmissibility to Canada."
+    },
+    {
+      title: "Medical Inadmissibility",
+      href: "/inadmissible/medical-inadmissibility",
+      description: "Information on medical inadmissibility to Canada."
+    },
+    {
+      title: "Procedural Fairness Letters from IRCC",
+      href: "/inadmissible/procedural-fairness-letters",
+      description: "Information on Procedural Fairness Letters from IRCC."
+    },
+    {
+      title: "Misrepresentation in Canadian Immigration",
+      href: "/inadmissible/misrepresentation-in-canadian-immigration",
+      description: "Information on Misrepresentation in Canadian Immigration."
+    },
+    {
+      title: "Temporary Resident Permits",
+      href: "/inadmissible/temporary-resident-permits",
+      description: "Information on Temporary Resident Permits in Canada."
+    },
+    {
+      title: "Authorization to Return to Canada",
+      href: "/inadmissible/authorization-to-return-to-canada",
+      description: "Information on Authorization to Return to Canada (ARC)."
+    }
+  ]
+};
+
 // Study navigation data
 export const studyNav = {
   title: "Study",
