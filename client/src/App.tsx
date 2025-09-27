@@ -26,6 +26,7 @@ import ProceduralFairnessLetters from "@/pages/ProceduralFairnessLetters";
 import MisrepresentationInCanadianImmigration from "@/pages/MisrepresentationInCanadianImmigration";
 import TemporaryResidentPermits from "@/pages/TemporaryResidentPermits";
 import AuthorizationToReturnToCanada from "@/pages/AuthorizationToReturnToCanada";
+import InadmissibleToCanada from "@/pages/InadmissibleToCanada";
 import Layout from "@/components/Layout";
 
 function Router() {
@@ -52,6 +53,7 @@ function Router() {
         <Route path="/study/:slug" component={StudyPage} />
         <Route path="/visit/:slug" component={VisitPage} />
         <Route path="/business/:slug" component={BusinessPage} />
+        <Route path="/inadmissible" component={InadmissibleToCanada} />
         <Route path="/inadmissible/criminal-inadmissibility" component={CriminalInadmissibility} />
         <Route path="/inadmissible/medical-inadmissibility" component={MedicalInadmissibility} />
         <Route path="/inadmissible/procedural-fairness-letters" component={ProceduralFairnessLetters} />
