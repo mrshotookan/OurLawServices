@@ -36,7 +36,7 @@ export default function WorkPermitPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 py-20 pt-32" data-testid="hero-section">
+      <section className="py-20 pt-32 bg-secondary" data-testid="hero-section">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
