@@ -66,7 +66,7 @@ export default function ImmigrationLaw() {
     <>
       <SEOHead
         title="Immigration Law Services - Professional Immigration Lawyers in Toronto"
-        description="Professional immigration law services in Toronto. Visa applications, permanent residency, work permits, refugee claims, and citizenship applications. Free consultation available."
+        description="Professional immigration law services in Toronto. Visa applications, permanent residency, work permits, refugee claims, and citizenship applications. Consultation available."
         keywords="immigration lawyer Toronto, visa applications, permanent residency Canada, work permits, refugee claims, citizenship applications"
         canonicalUrl={`${window.location.origin}/immigration-law`}
       />
@@ -98,7 +98,7 @@ export default function ImmigrationLaw() {
                   asChild
                   data-testid="free-assessment-button"
                 >
-                  <Link href="/contact">Free Immigration Assessment</Link>
+                  <Link href="/contact">Book Your Assessment</Link>
                 </Button>
                 <Button 
                   size="lg" 
@@ -272,7 +272,7 @@ export default function ImmigrationLaw() {
               {
                 step: "01",
                 title: "Initial Consultation",
-                description: "Free assessment of your immigration options and eligibility."
+                description: "Assessment of your immigration options and eligibility."
               },
               {
                 step: "02",
@@ -331,7 +331,7 @@ export default function ImmigrationLaw() {
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Take the first step towards making Canada your home. Contact us today 
-              for your free immigration assessment.
+              for your immigration assessment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -340,7 +340,7 @@ export default function ImmigrationLaw() {
                 asChild
                 data-testid="final-cta-button"
               >
-                <Link href="/contact">Get Your Free Assessment</Link>
+                <Link href="/contact">Book Your Assessment</Link>
               </Button>
               <Button 
                 size="lg" 

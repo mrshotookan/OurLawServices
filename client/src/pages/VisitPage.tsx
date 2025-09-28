@@ -38,26 +38,25 @@ export default function VisitPage() {
       <div className="min-h-screen bg-background text-foreground">
         {/* Hero Section */}
         <motion.section 
-          className="pt-32 pb-20 bg-primary text-primary-foreground relative overflow-hidden"
+          className="pt-32 pb-20 bg-secondary"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           data-testid="visit-hero"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80"></div>
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ scale: 0, rotate: -180 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center justify-center w-20 h-20 bg-primary-foreground/10 rounded-full mb-8"
+                className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-8"
               >
-                <Plane className="w-10 h-10" />
+                <Plane className="w-10 h-10 text-accent" />
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-4xl md:text-6xl font-bold mb-6 text-primary"
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -67,7 +66,7 @@ export default function VisitPage() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl md:text-2xl mb-8 text-primary-foreground/90"
+                className="text-xl md:text-2xl mb-8 text-muted-foreground"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -84,17 +83,14 @@ export default function VisitPage() {
               >
                 <Button 
                   size="lg" 
-                  variant="secondary"
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
                   asChild
                   data-testid="get-consultation-button"
                 >
-                  <Link href="/contact">Get Free Consultation</Link>
+                  <Link href="/contact">Book Your Consultation</Link>
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
                   asChild
                   data-testid="view-services-button"
                 >
@@ -310,7 +306,7 @@ export default function VisitPage() {
                   data-testid="cta-consultation-button"
                 >
                   <Link href="/contact">
-                    <span className="mr-2">Get Free Consultation</span>
+                    <span className="mr-2">Book Your Consultation</span>
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>

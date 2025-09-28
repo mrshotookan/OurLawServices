@@ -120,7 +120,7 @@ export default function Home() {
                   onClick={handleBookConsultation}
                   data-testid="hero-consultation-button"
                 >
-                  <Link href="/contact">Free Consultation</Link>
+                  <Link href="/contact">Book Your Consultation</Link>
                 </Button>
                 <Button 
                   variant="outline" 
@@ -419,7 +419,7 @@ export default function Home() {
                 asChild
                 data-testid="cta-consultation-button"
               >
-                <Link href="/contact">Schedule Free Consultation</Link>
+                <Link href="/contact">Book Your Consultation</Link>
               </Button>
               <Button 
                 variant="outline" 

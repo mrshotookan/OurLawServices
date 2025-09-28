@@ -98,7 +98,7 @@ export default function MegaMenu({ onClose }: MegaMenuProps) {
                 onClick={handleLinkClick}
                 data-testid="mega-menu-cta-contact"
               >
-                Free Consultation
+                Book Your Consultation
               </Link>
             </div>
           </div>
@@ -180,7 +180,7 @@ export function MobilePracticeAreasMenu({ onClose }: MegaMenuProps) {
               onClick={handleLinkClick}
               data-testid="mobile-mega-menu-cta-contact"
             >
-              Free Consultation
+              Book Your Consultation
             </Link>
           </div>
         </div>

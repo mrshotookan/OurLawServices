@@ -232,7 +232,7 @@ export default function WorkPermitPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button size="lg" className="bg-white dark:bg-white text-primary dark:text-primary hover:bg-gray-100 dark:hover:bg-gray-100" asChild data-testid="cta-consultation-final">
-                <Link href="/contact">Schedule Free Consultation</Link>
+                <Link href="/contact">Book Your Consultation</Link>
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-primary" asChild data-testid="cta-phone-final">
                 <a href="tel:+15555555555">

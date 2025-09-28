@@ -236,7 +236,7 @@ export default function StudyPage() {
                 <Button variant="outline" size="lg" className="border-2 border-white dark:border-white text-white dark:text-white hover:bg-white dark:hover:bg-white hover:text-primary dark:hover:text-primary" asChild data-testid="cta-phone-bottom">
                   <a href="tel:+15555555555" className="inline-flex items-center gap-2">
                     <Phone className="w-4 h-4" />
-                    Call for Free Consultation
+                    Book Your Consultation
                   </a>
                 </Button>
               </div>

@@ -89,7 +89,7 @@ export default function BusinessPage() {
                   asChild
                   data-testid="get-consultation-button"
                 >
-                  <Link href="/contact">Get Free Consultation</Link>
+                  <Link href="/contact">Book Your Consultation</Link>
                 </Button>
                 <Button 
                   size="lg" 
@@ -310,7 +310,7 @@ export default function BusinessPage() {
                   data-testid="cta-consultation-button"
                 >
                   <Link href="/contact">
-                    <span className="mr-2">Get Free Consultation</span>
+                    <span className="mr-2">Book Your Consultation</span>
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>

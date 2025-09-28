@@ -196,7 +196,7 @@ export default function PracticeAreas() {
               asChild
               data-testid="consultation-cta"
             >
-              <Link href="/contact">Schedule Your Free Consultation</Link>
+              <Link href="/contact">Book Your Consultation</Link>
             </Button>
           </motion.div>
         </div>
