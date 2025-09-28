@@ -27,6 +27,7 @@ import MisrepresentationInCanadianImmigration from "@/pages/MisrepresentationInC
 import TemporaryResidentPermits from "@/pages/TemporaryResidentPermits";
 import AuthorizationToReturnToCanada from "@/pages/AuthorizationToReturnToCanada";
 import InadmissibleToCanada from "@/pages/InadmissibleToCanada";
+import SponsorshipApplications from "@/pages/SponsorshipApplications";
 import Layout from "@/components/Layout";
 
 function Router() {
@@ -60,6 +61,7 @@ function Router() {
         <Route path="/inadmissible/misrepresentation-in-canadian-immigration" component={MisrepresentationInCanadianImmigration} />
         <Route path="/inadmissible/temporary-resident-permits" component={TemporaryResidentPermits} />
         <Route path="/inadmissible/authorization-to-return-to-canada" component={AuthorizationToReturnToCanada} />
+        <Route path="/sponsorship-applications" component={SponsorshipApplications} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

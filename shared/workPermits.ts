@@ -2516,6 +2516,11 @@ export const practiceAreas = [
     title: "Wills & Power of Attorney",
     href: "/wills-power-of-attorney",
     description: "Estate planning and legal documentation"
+  },
+  {
+    title: "Sponsorship Applications",
+    href: "/sponsorship-applications",
+    description: "Family class sponsorship applications"
   }
 ];
 
