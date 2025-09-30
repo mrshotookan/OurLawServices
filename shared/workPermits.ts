@@ -2580,28 +2580,11 @@ export const studyNav = {
   title: "Study",
   href: "/study",
   description: "Student visas and study permits in Canada",
-  subItems: [
-    ...studyPages.map(page => ({
-      title: page.title,
-      href: `/study/${page.slug}`,
-      description: page.hero.description
-    })),
-    {
-      title: "Work while Studying",
-      href: "/work-permits/work-while-studying",
-      description: "Work authorization for international students in Canada"
-    },
-    {
-      title: "Post Graduate Work Permit (PGWP)",
-      href: "/work-permits/post-graduation-work-permit",
-      description: "Open work permits for international graduates"
-    },
-    {
-      title: "PGWP Eligibility",
-      href: "/work-permits/pgwp-eligibility", 
-      description: "Detailed requirements for Post-Graduation Work Permit qualification"
-    }
-  ]
+  subItems: studyPages.map(page => ({
+    title: page.title,
+    href: `/study/${page.slug}`,
+    description: page.hero.description
+  }))
 };
 
 // Visit Canada navigation data
