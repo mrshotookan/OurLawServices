@@ -16,7 +16,6 @@ import WillsPowerOfAttorney from "@/pages/WillsPowerOfAttorney";
 import CriminalLaw from "@/pages/CriminalLaw";
 import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
-import StudyPage from "@/pages/StudyPage";
 import VisitPage from "@/pages/VisitPage";
 import BusinessPage from "@/pages/BusinessPage";
 import CriminalInadmissibility from "@/pages/CriminalInadmissibility";
@@ -45,10 +44,8 @@ function Router() {
         <Route path="/criminal-law" component={CriminalLaw} />
         <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
-        <Route path="/study" component={() => <Redirect to="/study/student-visa" />} />
         <Route path="/visit" component={() => <Redirect to="/visit/super-visa" />} />
         <Route path="/business" component={() => <Redirect to="/business/business-visitor" />} />
-        <Route path="/study/:slug" component={StudyPage} />
         <Route path="/visit/:slug" component={VisitPage} />
         <Route path="/business/:slug" component={BusinessPage} />
         <Route path="/inadmissible" component={InadmissibleToCanada} />
