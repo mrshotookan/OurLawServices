@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Plane, Building, Scale, AlertTriangle } from "lucide-react";
+import { Menu, X, ChevronDown, Plane, Building, Scale, TriangleAlert as AlertTriangle } from "lucide-react";
 import { visitNav, businessNav, practiceAreas, inadmissibleNav } from "@shared/workPermits";
 
 export default function Navigation() {
